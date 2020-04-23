@@ -27,7 +27,6 @@
 	"license": "GPL-2.0-or-later",
 	"dependencies": {
 		"discord.js": "^12.2.0",
-		"dotenv": "^8.2.0",
 		"mongodb": "^3.5.6"
 	},
 	"repository": {

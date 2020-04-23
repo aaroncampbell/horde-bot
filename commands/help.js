@@ -1,6 +1,5 @@
-// Process .env file into process.env
-require( 'dotenv' ).config();
-const prefix = ( process.env.PREFIX )? process.env.PREFIX : '!';
+const config = require( '../config.json' );
+const prefix = ( config.prefix )? config.prefix : '!';
 
 module.exports = {
 	name: 'help',

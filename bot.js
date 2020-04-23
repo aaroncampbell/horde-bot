@@ -1,6 +1,5 @@
-// Process .env file into process.env
-require( 'dotenv' ).config();
-const prefix = ( process.env.PREFIX )? process.env.PREFIX : '!';
+const config = require('./config.json');
+const prefix = ( config.prefix )? config.prefix : '!';
 
 // Require FS
 const fs = require( 'fs' );
@@ -96,7 +95,7 @@ client.on( 'message', message => {
 });
 
 // login to Discord
-client.login( process.env.TOKEN );
+client.login( config.token );
 
 /*
 var MongoClient = require('mongodb').MongoClient;
