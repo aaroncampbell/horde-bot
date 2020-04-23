@@ -34,12 +34,14 @@ client.on( 'message', message => {
 	// Fill args with all content of the message, removing prefix and exploding on spaces
 	const args = message.content.slice( prefix.length ).split( / +/ );
 	// The command is the first argument
-	const command = args.shift().toLowerCase();
+	const commandName = args.shift().toLowerCase();
 
-	if ( ! client.commands.has( command ) ) { return; }
+	if ( ! client.commands.has( commandName ) ) { return; }
+
+	const command = client.commands.get(commandName);
 
 	try {
-		client.commands.get( command ).execute( message, args );
+		command.execute( message, args );
 	} catch ( error ) {
 		console.error( error );
 		message.reply( 'there was an error trying to execute that command!' );
