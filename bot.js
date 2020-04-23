@@ -39,9 +39,10 @@ client.on( 'message', message => {
 	// The command is the first argument
 	const commandName = args.shift().toLowerCase();
 
-	if ( ! client.commands.has( commandName ) ) { return; }
+	const command = client.commands.get(commandName)
+		|| client.commands.find( cmd => cmd.aliases && cmd.aliases.includes( commandName ) );
 
-	const command = client.commands.get(commandName);
+	if ( ! command ) { return; }
 
 	// For commands that are only available in a regular server channel
 	if ( command.guildOnly && 'text' !== message.channel.type ) {
