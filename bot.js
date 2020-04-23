@@ -40,8 +40,16 @@ client.on( 'message', message => {
 
 	const command = client.commands.get(commandName);
 
+	// For commands that are only available in a regular server channel
+	if ( command.guildOnly && 'text' !== message.channel.type ) {
+		return message.reply( 'I can\'t execute that command inside DMs!' );
+	}
+
+	// When Args are required
 	if ( command.args && ! args.length ) {
 		let reply = `You didn't provide any arguments, ${message.author}!`;
+
+		// If a usage is specified, offer that to the user
 		if ( command.usage ) {
 			reply += `\nThe proper usage would be: \`${prefix}${command.name} ${command.usage}\``;
 		}
