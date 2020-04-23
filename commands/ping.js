@@ -3,6 +3,12 @@ module.exports = {
 	description: 'Ping!',
 	cooldown: 5,
 	execute( message, args ) {
-		message.channel.send('Pong.');
+		message.channel
+			.send('ping')
+			.then(m =>
+				m.edit(
+					`Pong! Latency is ${m.createdTimestamp - message.createdTimestamp}ms.`
+				)
+			);
 	},
 };
