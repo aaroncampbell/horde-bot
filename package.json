@@ -1,0 +1,37 @@
+{
+	"name": "HordeBot",
+	"version": "0.0.1",
+	"description": "The Horde's Hero Wars Discord Bot",
+	"main": "bot.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "node .",
+		"lint": "eslint ."
+	},
+	"keywords": [
+		"Hero Wars",
+		"HeroWars"
+	],
+	"author": {
+		"name": "Aaron D. Campbell",
+		"email": "Aaron@AaronDCampbell.com",
+		"url": "https://AaronDCampbell.com"
+	},
+	"contributors": [
+		{
+			"name": "Aaron D. Campbell",
+			"email": "Aaron@AaronDCampbell.com",
+			"url": "https://AaronDCampbell.com"
+		}
+	],
+	"license": "GPL-2.0-or-later",
+	"dependencies": {
+		"discord.js": "^12.2.0",
+		"dotenv": "^8.2.0",
+		"mongodb": "^3.5.6"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git@github.com:aaroncampbell/horde-bot.git"
+	}
+}
