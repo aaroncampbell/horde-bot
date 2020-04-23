@@ -19,6 +19,9 @@ for ( const file of commandFiles ) {
 	client.commands.set( command.name, command );
 }
 
+// Cooldowns
+const cooldowns = new Discord.Collection();
+
 // when the client is ready, run this code
 // this event will only trigger one time after logging in
 client.once('ready', () => {
@@ -55,6 +58,31 @@ client.on( 'message', message => {
 		}
 		return message.channel.send( reply );
 	}
+
+	// Each command needs it's own cooldown collection
+	if ( !cooldowns.has( command.name ) ) {
+		cooldowns.set( command.name, new Discord.Collection() );
+	}
+
+	const now = Date.now();
+	const timestamps = cooldowns.get( command.name );
+	// Cooldown in ms - 3 second default
+	const cooldownAmount = ( command.cooldown || 3 ) * 1000;
+
+	// If three's
+	if ( timestamps.has( message.author.id ) ) {
+		const expirationTime = timestamps.get( message.author.id ) + cooldownAmount;
+
+		if ( now < expirationTime ) {
+			const timeLeft = ( expirationTime - now ) / 1000;
+			return message.reply( `please wait ${timeLeft.toFixed( 1 )} more second(s) before reusing the \`${prefix}${command.name}\` command.` );
+		}
+	}
+
+	// Add the last-used timestamp for the author for this command
+	timestamps.set( message.author.id, now );
+	// Set a timeout to remove that last used timestamp
+	setTimeout( () => timestamps.delete( message.author.id ), cooldownAmount );
 
 	try {
 		command.execute( message, args );
