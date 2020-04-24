@@ -49,8 +49,11 @@ client.on( 'message', message => {
 	}
 
 	// When limited to certain channels
-	if ( command.allowedInChannels && ! command.allowedInChannels.includes( message.channel.id ) ) {
-		return;
+	if ( command.allowedInChannels || ( config.commandsAllowedInChannels && config.commandsAllowedInChannels[command.name] ) ) {
+		let allowedChannels = [].concat( command.allowedInChannels, config.commandsAllowedInChannels[command.name] ).filter( c => c !== undefined );
+		if ( ! allowedChannels.includes( message.channel.id ) ) {
+			return message.reply( `that command is only for use in <#${allowedChannels.join( '>, <#' )}>` );
+		}
 	}
 
 	// When Args are required
