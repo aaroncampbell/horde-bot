@@ -87,7 +87,7 @@ module.exports = {
 
 							// Loop through results to get max team name length for formatting purposes
 							results.forEach(r => {
-								maxLength = Math.max(maxLength, r.team1.length);
+								maxLength = Math.max(maxLength, r.team1.length, r.team2.length);
 							});
 
 							let previousDate = '';
