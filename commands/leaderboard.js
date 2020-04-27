@@ -44,6 +44,7 @@ module.exports = {
 				// If the given args could no be processed into a valid date, use today
 				if ( isNaN( dateRequested.getTime() ) ) {
 					dateRequested = new Date();
+					dateRequested.setUTCHours( 0, 0, 0, 0 );
 				}
 				let startDate = new Date( dateRequested.getTime() );
 
