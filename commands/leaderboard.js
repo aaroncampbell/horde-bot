@@ -47,23 +47,19 @@ module.exports = {
 				}
 				let startDate = new Date( dateRequested.getTime() );
 
-				if ( 1 !== startDate.getDay() ) {
-					let day = startDate.getDay() || 7;
+				if ( 1 !== startDate.getUTCDay() ) {
+					let day = startDate.getUTCDay() || 7;
 					if( day !== 1 ) {
-						startDate.setHours(-24 * (day - 1));
+						startDate.setUTCHours(-24 * (day - 1));
 					}
 				}
 
 				let endDate = new Date( startDate );
-				endDate.setHours( 24 * 4 );
+				endDate.setUTCHours( 24 * 4 );
 
-				const dateFormat = new Intl.DateTimeFormat('en-US', { year: 'numeric', month: '2-digit', day: '2-digit' });
-				const [{ value: startMonth },,{ value: startDay },,{ value: startYear }] = dateFormat.formatToParts(startDate);
-				const [{ value: endMonth },,{ value: endDay },,{ value: endYear }] = dateFormat.formatToParts(endDate);
-
-				// Fix date because JS does some stuff in local timezone and some in UTC but Mongo wants UTC
-				startDate.setUTCHours( 0, 0, 0, 0 );
-				endDate.setUTCHours( 0, 0, 0, 0 );
+				const dateFormat = new Intl.DateTimeFormat('en-US', { year: 'numeric', month: '2-digit', day: '2-digit', timeZone:'UTC' });
+				const [{ value: startMonth },,{ value: startDay },,{ value: startYear }] = dateFormat.formatToParts( startDate );
+				const [{ value: endMonth },,{ value: endDay },,{ value: endYear }] = dateFormat.formatToParts( endDate );
 
 				let search = {
 					date: {
