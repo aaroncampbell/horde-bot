@@ -22,11 +22,8 @@ module.exports = {
 					 * Set a score using `scores set` with JSON containing necessary data:
 					 * !scores set {"date": "2020-04-27", "team1": "The Horde", "score1": 1350, "team2": "Left4Dead 2", "score2": 1000}
 					 */
-					args.shift();
 					// Slice off 'set', trim whitespace, and parse JSON object
 					let score = JSON.parse( rawArgs.slice( 3 ).trim() );
-
-					console.log( score );
 
 					score.date = new Date( score.date );
 					scoresCollection.replaceOne( {date:score.date, team1:score.team1, team2:score.team2}, score, { upsert: true} )
