@@ -41,8 +41,8 @@ module.exports = {
 					 * Delete a score using `scores delete` with JSON containing necessary data:
 					 * !scores delete {"date": "2020-04-27", "team1": "The Horde"}
 					 */
-					// Slice off 'set', trim whitespace, and parse JSON object
-					let score = JSON.parse( rawArgs.slice( 3 ).trim() );
+					// Slice off 'delete', trim whitespace, and parse JSON object
+					let score = JSON.parse( rawArgs.slice( 6 ).trim() );
 
 					score.date = new Date( score.date );
 					scoresCollection.deleteOne( score )
