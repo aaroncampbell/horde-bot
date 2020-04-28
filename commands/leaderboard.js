@@ -35,6 +35,25 @@ module.exports = {
 					return;
 				}
 
+				// Set a score
+				if ( 'delete' === args[0] ) {
+					/**
+					 * Delete a score using `scores delete` with JSON containing necessary data:
+					 * !scores delete {"date": "2020-04-27", "team1": "The Horde"}
+					 */
+					// Slice off 'set', trim whitespace, and parse JSON object
+					let score = JSON.parse( rawArgs.slice( 3 ).trim() );
+
+					score.date = new Date( score.date );
+					scoresCollection.deleteOne( score )
+						.then( result => {
+							return message.reply( 'score removed' );
+						} )
+						.catch( error => console.error( error ) );
+
+					return;
+				}
+
 				/**
 				 * Handle Displaying Scores
 				 */
