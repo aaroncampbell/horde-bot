@@ -20,7 +20,7 @@ module.exports = {
 				'For instance, Ishmael with a critical hit chance of 7182 attacks Astaroth with Strength (his main stat) of 13030\n' +
 				'\n' +
 				'7182/(7182+13010)*100 = 35% chance that Ishmael\'s attack would deal double damage.\n' +
-				'[Source](https://herowars.zendesk.com/hc/en-us/articles/360008903533-Energy-generation-system)' );
+				'[Source](https://herowars.zendesk.com/hc/en-us/articles/360039321154-Critical-hit-chance-and-dodge)' );
 
 		message.channel.send( prioritiesEmbed );
 	},
