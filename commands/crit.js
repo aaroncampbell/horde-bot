@@ -3,7 +3,7 @@ const Discord = require( 'discord.js' );
 
 module.exports = {
 	name: 'crit', // command name
-	description: 'How energy builds', // Description
+	description: 'How Critical Hits Work', // Description
 	aliases: [ 'critical', 'crithit', 'criticalhit', 'critchance', 'criticalchance' ],
 	execute( message, args ) {
 		// Command to execute
