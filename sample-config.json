@@ -3,6 +3,7 @@
 	"token": "your-token-goes-here",
 	"dbConnectionUrl": "mongodb://127.0.0.1:27017/",
 	"dbName": "hordebot",
+	"defaultServer": 60,
 	"commandsAllowedInChannels": {
 		"command-name": ["channel-id-as-string","another-channel-id-as-string"],
 		"another-command-name": ["channel-id-as-string","another-channel-id-as-string"]
