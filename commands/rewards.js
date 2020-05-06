@@ -77,7 +77,8 @@ module.exports = {
 				}
 
 				// Embed to display
-				let rewardsEmbed = new Discord.MessageEmbed();
+				let rewardsEmbed = new Discord.MessageEmbed()
+					.setThumbnail( 'https://heroes-a.akamaihd.net/i/hw-web/promo/pages/kiss_mobile/mobile-logo-en.png' );
 				rewardsEmbed.setTitle( 'Reward Times' );
 
 				// Start a search object to fill - empty finds all rewards
@@ -119,7 +120,7 @@ module.exports = {
 						rewardsEmbed.setTitle('Reward Times in the Next Hour');
 					}
 				}
-				console.log( '**SEARCH**\n', search );
+				// console.log( '**SEARCH**\n', search );
 
 				rewardsCollection.find( search ).sort( { tzOffset: 1, server: 1 } ).toArray()
 					.then( results => {
