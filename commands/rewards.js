@@ -108,8 +108,9 @@ module.exports = {
 
 				// Embed to display
 				let rewardsEmbed = new Discord.MessageEmbed()
-					.setThumbnail( 'https://heroes-a.akamaihd.net/i/hw-web/promo/pages/kiss_mobile/mobile-logo-en.png' );
-				rewardsEmbed.setTitle( 'Reward Times' );
+					.setThumbnail( 'https://heroes-a.akamaihd.net/i/hw-web/promo/pages/kiss_mobile/mobile-logo-en.png' )
+					.setColor( '#9013FE' )
+					.setTitle( 'Reward Times' );
 
 				// Start a search object to fill - empty finds all rewards
 				let search = {};
@@ -170,7 +171,6 @@ module.exports = {
 								userList.push(userString);
 
 								if (results[index + 1] == undefined || r.tzOffset != results[index + 1].tzOffset) {
-									rewardsEmbed.setColor('#9013FE');
 									let timeTo = [];
 									let minutesTo = minutesDiff - r.tzOffset;
 
