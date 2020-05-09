@@ -1,5 +1,6 @@
 const config = require('./config.json');
 const prefix = ( config.prefix )? config.prefix : '!';
+const CronJob = require( 'cron' ).CronJob;
 
 // Require FS
 const fs = require( 'fs' );
@@ -8,8 +9,24 @@ const fs = require( 'fs' );
 const Discord = require( 'discord.js' );
 
 // create a new Discord client
-const client = new Discord.Client();
+const client = new Discord.Client( { partials: ['MESSAGE', 'CHANNEL', 'REACTION'] } );
 client.commands = new Discord.Collection();
+
+/**
+ * Used to send a message to a channel given a channel ID and the message to send
+ */
+client.sendMessage = function ( channelID, message ) {
+	// If there is no message, don't even try
+	if ( ! message.toString().length ) return;
+	client.channels.fetch( channelID )
+		.then( channel => {
+			// TODO: Make sure there's a message to send
+			channel.send( message );
+		} )
+		.catch( error => {
+			console.error( 'There was an error using sendMessage:\n', error );
+		});
+}
 
 const commandFiles = fs.readdirSync( './commands' ).filter( file => file.endsWith( '.js' ) );
 
@@ -25,13 +42,33 @@ const cooldowns = new Discord.Collection();
 // this event will only trigger one time after logging in
 client.once('ready', () => {
 	console.log( 'Ready!' );
+
+	// If we have tasks to schedule
+	if ( config.scheduledTasks && Array.isArray( config.scheduledTasks ) && config.scheduledTasks.length ) {
+		config.scheduledTasks.forEach( c => {
+			// We only support sending messages right now & must have a message to send and a channel to send it to
+			if ( 'sendMessage' !== c.task || !c.channel.toString() || !c.message.toString() ) {
+				return;
+			}
+
+			try {
+				let job = new CronJob( c.cronTime, function() {
+					client.sendMessage( c.channel, c.message );
+				}, null, true, c.timezone );
+				job.start();
+			} catch ( error ) {
+				console.error( 'Could not start cron due to error: ', error.message );
+			}
+		} );
+	}
+	/**/
 });
 
 // Run on every message
 client.on( 'message', message => {
 
 	// Ignore messages not meant for us
-	if ( ! message.content.startsWith( prefix ) || message.author.bot ) { return; }
+	if ( ! message.content.startsWith( prefix ) ) { return; }
 
 	// Fill args with all content of the message, removing prefix and exploding on spaces
 	const args = message.content.slice( prefix.length ).split( / +/ );
