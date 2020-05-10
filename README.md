@@ -17,33 +17,7 @@ The Horde's Hero Wars Discord Bot
     * Show all assignments
 * Commands for helpful info in [this sheet](https://docs.google.com/spreadsheets/d/1yKuUZNk8SpnZ4dMhoDKz8r6OjXDAvD-3y17yyNP39_g/edit#gid=1154313169) such as titan upgrade costs, etc
 * Scheduled reminders
-    * set up in config.json such as:
-    ```
-	"scheduledTasks": [
-		{
-			"cronTime": "0 0 1-23/2 * * *",
-			"task": "sendMessage",
-			"channel": "680825803424268300",
-			"timezone": "UTC",
-			"message": "@TH don't forget to do your dungeon runs and get activity in"
-		},
-		{
-			"cronTime": "0 1 * * * *",
-			"task": "sendMessage",
-			"channel": "680825803424268300",
-			"timezone": "UTC",
-			"message": "!rewards"
-		},
-		{
-			"cronTime": "0 0 19 * * *",
-			"task": "sendMessage",
-			"channel": "680825803424268300",
-			"timezone": "UTC",
-			"message": "@TH war ends in 1 hour, please make sure you've gotten your hits in"
-		}
-	]
-    ```
-    * Consider if it would be better to only allow messages with this or if certain commands should have special cron functionality built in (like rewards)  
+    * Would it be good to allow more than just sending a message as cron tasks?  
     * `!remind` command that would let you set a reminder for yourself or someone else.
 
 ## Future awesomeness
