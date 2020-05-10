@@ -69,6 +69,8 @@ client.on( 'message', message => {
 
 	// Ignore messages not meant for us
 	if ( ! message.content.startsWith( prefix ) ) { return; }
+	// Used to also ignore messages from bots, but stopped so cron messages can trigger commands
+	//  || message.author.bot
 
 	// Fill args with all content of the message, removing prefix and exploding on spaces
 	const args = message.content.slice( prefix.length ).split( / +/ );
