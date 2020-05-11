@@ -1,5 +1,5 @@
-const config = require('./config.json');
-const prefix = ( config.prefix )? config.prefix : '!';
+const config = require( './loadConfig.js' );
+
 const CronJob = require( 'cron' ).CronJob;
 
 // Require FS
@@ -68,15 +68,15 @@ client.once('ready', () => {
 client.on( 'message', message => {
 
 	// Ignore messages not meant for us
-	if ( ! message.content.startsWith( prefix ) ) { return; }
+	if ( ! message.content.startsWith( config.prefix ) ) { return; }
 	// Used to also ignore messages from bots, but stopped so cron messages can trigger commands
 	//  || message.author.bot
 
 	// Fill args with all content of the message, removing prefix and exploding on spaces
-	const args = message.content.slice( prefix.length ).split( / +/ );
+	const args = message.content.slice( config.prefix.length ).split( / +/ );
 	// The command is the first argument
 	const commandName = args.shift().toLowerCase();
-	const rawArgs = message.content.slice( prefix.length + commandName.length ).trim();
+	const rawArgs = message.content.slice( config.prefix.length + commandName.length ).trim();
 
 	const command = client.commands.get(commandName)
 		|| client.commands.find( cmd => cmd.aliases && cmd.aliases.includes( commandName ) );
@@ -102,7 +102,7 @@ client.on( 'message', message => {
 
 		// If a usage is specified, offer that to the user
 		if ( command.usage ) {
-			reply += `\nThe proper usage would be: \`${prefix}${command.name} ${command.usage}\``;
+			reply += `\nThe proper usage would be: \`${config.prefix}${command.name} ${command.usage}\``;
 		}
 		return message.channel.send( reply );
 	}
@@ -123,7 +123,7 @@ client.on( 'message', message => {
 
 		if ( now < expirationTime ) {
 			const timeLeft = ( expirationTime - now ) / 1000;
-			return message.reply( `please wait ${timeLeft.toFixed( 1 )} more second(s) before reusing the \`${prefix}${command.name}\` command.` );
+			return message.reply( `please wait ${timeLeft.toFixed( 1 )} more second(s) before reusing the \`${config.prefix}${command.name}\` command.` );
 		}
 	}
 
