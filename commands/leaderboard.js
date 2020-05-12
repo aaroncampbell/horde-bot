@@ -10,6 +10,17 @@ module.exports = {
 		const config = require('../config.json');
 		const MongoClient = require('mongodb').MongoClient;
 
+		// Fixes a score to be a number, allows/calculates subtraction
+		let fixScore = function (s) {
+			// Only allow digits and hyphens, must end in digit
+			s = s.toString().match( /[\d-]*\d/g )[0];
+			// If it's not a number, then it's something like 123-23, safe to eval
+			if ( isNaN(s) ) {
+				s = eval( s );
+			}
+			// Force to int
+			return parseInt(s);
+		}
 
 		MongoClient.connect( config.dbConnectionUrl, { useUnifiedTopology: true } )
 			.then( client => {
@@ -25,6 +36,8 @@ module.exports = {
 					// Slice off 'set', trim whitespace, and parse JSON object
 					let score = JSON.parse( rawArgs.slice( 3 ).trim() );
 
+					score.score1 = fixScore( score.score1 );
+					score.score2 = fixScore( score.score2 );
 					score.date = new Date( score.date );
 					scoresCollection.replaceOne( {date:score.date, team1:score.team1, team2:score.team2}, score, { upsert: true} )
 						.then( result => {
