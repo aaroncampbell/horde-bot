@@ -1,6 +1,6 @@
 const config = require( './loadConfig.js' );
 
-const CronJob = require( 'cron' ).CronJob;
+const ScheduledTasks = require( './scheduled-tasks.js' );
 
 // Require FS
 const fs = require( 'fs' );
@@ -43,25 +43,7 @@ const cooldowns = new Discord.Collection();
 client.once('ready', () => {
 	console.log( 'Ready!' );
 
-	// If we have tasks to schedule
-	if ( config.scheduledTasks && Array.isArray( config.scheduledTasks ) && config.scheduledTasks.length ) {
-		config.scheduledTasks.forEach( c => {
-			// We only support sending messages right now & must have a message to send and a channel to send it to
-			if ( 'sendMessage' !== c.task || !c.channel.toString() || !c.message.toString() ) {
-				return;
-			}
-
-			try {
-				let job = new CronJob( c.cronTime, function() {
-					client.sendMessage( c.channel, c.message );
-				}, null, true, c.timezone );
-				job.start();
-			} catch ( error ) {
-				console.error( 'Could not start cron due to error: ', error.message );
-			}
-		} );
-	}
-	/**/
+	ScheduledTasks.startAll();
 });
 
 // Run on every message
