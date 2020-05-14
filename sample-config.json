@@ -8,6 +8,9 @@
 		"command-name": ["channel-id-as-string","another-channel-id-as-string"],
 		"another-command-name": ["channel-id-as-string","another-channel-id-as-string"]
 	},
+	"arenaRewardsSchedule": {
+		"channel": "channel-id-as-string"
+	},
 	"scheduledTasks": [
 		{
 			"cronTime": "0 0 1-23/2 * * *",
@@ -15,12 +18,6 @@
 			"channel": "channel-id-as-string",
 			"timezone": "UTC",
 			"message": "<@&role-id-to-ping-as-string> Reminds people something every other hour on odd hours"
-		},{
-			"cronTime": "15 0 * * * *",
-			"task": "sendMessage",
-			"channel": "channel-id-as-string",
-			"timezone": "UTC",
-			"message": "!rewards"
 		},{
 			"cronTime": "0 0 19 * * 1-5",
 			"task": "sendMessage",
