@@ -43,6 +43,11 @@ const cooldowns = new Discord.Collection();
 client.once('ready', () => {
 	console.log( 'Ready!' );
 
+	client.commands.filter( cmd => 'function' === typeof cmd.onReady )
+		.each( cmd => {
+			cmd.onReady( client );
+		} );
+
 	ScheduledTasks.startAll();
 });
 
