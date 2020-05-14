@@ -1,59 +1,207 @@
+const config = require( '../loadConfig.js' );
+const MongoClient = require('mongodb').MongoClient;
+
 // require the discord.js module
 const Discord = require( 'discord.js' );
+
+// Turns minute-based offsets to an offset string, ex 300 -> +0500 or -150 -> -0230
+const tzOffsetMinutesToString = function( m ) {
+	return ((m < 0)?'-':'+') + Math.floor( Math.abs( m ) / 60 ).toString().padStart( 2, '0' ) + ( Math.abs( m ) % 60).toString().padStart( 2, '0' );
+};
+
+// Use moment-timezone for timezone handling
+let moment = require('moment-timezone');
+// Support GMT+-XX format for timezones
+moment.tz.link([
+	'GMT-12|Etc/GMT+12',
+	'GMT-11|Etc/GMT+11',
+	'GMT-10|Etc/GMT+10',
+	'GMT-9|Etc/GMT+9',
+	'GMT-8|Etc/GMT+8',
+	'GMT-7|Etc/GMT+7',
+	'GMT-6|Etc/GMT+6',
+	'GMT-5|Etc/GMT+5',
+	'GMT-4|Etc/GMT+4',
+	'GMT-3|Etc/GMT+3',
+	'GMT-2|Etc/GMT+2',
+	'GMT-1|Etc/GMT+1',
+	'GMT-0|GMT',
+	'GMT+0|GMT',
+	'GMT+1|Etc/GMT-1',
+	'GMT+2|Etc/GMT-2',
+	'GMT+3|Etc/GMT-3',
+	'GMT+4|Etc/GMT-4',
+	'GMT+5|Etc/GMT-5',
+	'GMT+6|Etc/GMT-6',
+	'GMT+7|Etc/GMT-7',
+	'GMT+8|Etc/GMT-8',
+	'GMT+9|Etc/GMT-9',
+	'GMT+10|Etc/GMT-10',
+	'GMT+11|Etc/GMT-11',
+	'GMT+12|Etc/GMT-12'
+]);
 
 module.exports = {
 	name: 'rewards', // command name
 	description: 'Display or set rewards times', // Description
 	aliases: ['rewardstime'],
-	usage: '[user] || [timezone] || [server (s## such as s60)] || set [timezone] [server (s## such as s60)(optional)] || delete [server (s## such as s60)(optional)]',
+	usage: '[user] \\|\\| [timezone] \\|\\| [server (s## such as s60)] \\|\\| set [timezone] [server (s## such as s60)(optional)] \\|\\| delete [server (s## such as s60)(optional)]',
+	onReady( client ) {
+		// If the arenaRewardsSchedule is specified in config and a channel is specified as part of it
+		if ( 'object' === typeof config.arenaRewardsSchedule && config.arenaRewardsSchedule.channel.toString() ) {
+
+			const ScheduledTasks = require( '../scheduled-tasks.js' );
+
+			client.channels.fetch( config.arenaRewardsSchedule.channel )
+				// TODO: default cronTime to '15 0 * * * *'
+				// TODO: default timezone to null?
+				.then( channel => {
+					try {
+						const defaultCronTime = '15 0 * * * *';
+						const CronJob = require('cron').CronJob;
+						if ( ! moment.tz.zone( config.arenaRewardsSchedule.timezone ) ) {
+							config.arenaRewardsSchedule.timezone = null;
+						}
+
+						// If no crontime is specified, use the default.
+						if ( ! config.arenaRewardsSchedule.cronTime ) {
+							config.arenaRewardsSchedule.cronTime = defaultCronTime;
+						} else {
+							try {
+								// Try the specified crontime and if it throws an error use the default
+								const CronTime = require('cron').CronTime;
+								new CronTime( config.arenaRewardsSchedule.cronTime );
+							} catch (error) {
+								config.arenaRewardsSchedule.cronTime = defaultCronTime;
+							}
+						}
+						let job = new CronJob( config.arenaRewardsSchedule.cronTime, function() {
+							module.exports.displayRewards( { channel: channel }, [], true );
+						}, null, true, config.arenaRewardsSchedule.timezone );
+						ScheduledTasks.jobs.push( job );
+						job.start();
+					} catch ( error ) {
+						console.error( 'Could not start cron due to error: ', error.message );
+					}
+				} )
+				.catch( error => {
+					console.error( 'There was an error scheduling arena rewards:\n', error );
+				});
+		}
+
+	},
+	displayRewards( message, args, cron = false ) {
+		MongoClient.connect( config.dbConnectionUrl, { useUnifiedTopology: true } )
+			.then( client => {
+				const db = client.db(config.dbName);
+				const rewardsCollection = db.collection('rewards');
+				// Embed to display
+				let rewardsEmbed = new Discord.MessageEmbed()
+					.setThumbnail('https://heroes-a.akamaihd.net/i/hw-web/promo/pages/kiss_mobile/mobile-logo-en.png')
+					.setColor('#9013FE')
+					.setTitle('Reward Times');
+
+				// Start a search object to fill - empty finds all rewards
+				let search = {};
+
+				let rewardsTime = moment().utc();
+				if (moment().utc().hours() < 8) {
+					rewardsTime.hours(-24);
+				}
+				// Number of minutes between current time and 2000 UTC - essentially offset from rewards time in minutes
+				let minutesDiff = rewardsTime.hours(20).minutes(0).seconds(0).diff(moment().utc(), 'minutes');
+
+				let server;
+				// If "all" rewards weren't requested, then work out search terms
+				if ('all' !== args[0]) {
+					// If specific users were requested
+					if ( ! cron && message.mentions.users.size ) {
+						search.userid = {$in: message.mentions.users.map(user => user.id)};
+						rewardsEmbed.setTitle('Reward Times for Requested Users');
+					} else if ( ! cron && args[0] && 's' === args[0].trim()[0] && ( server = parseInt( args[0].replace( /^s+/, '' ) ) ) ) {
+						// If a server was specified, such as 's60'
+						search.server = server;
+						rewardsEmbed.setTitle(`Reward Times for Server ${server}`);
+					} else if ( !cron && args[0] ) {
+						// If there's an argument that's not set, all, or a server - assume it's a timezone
+
+						if (!moment.tz.zone(args[0])) {
+							return message.reply(`I don't recognize the \`${args[0]}\` timezone.\nYou can use this list of tz database time zones to find yours if you don't know it - https://en.wikipedia.org/wiki/List_of_tz_database_time_zones`);
+						}
+
+						// get timezone now that we know it's valid and add it's offset to search
+						search.tzOffset = moment.tz(args[0]).utcOffset();
+						rewardsEmbed.setTitle(`Reward Times for ${args[0]}`);
+					} else {
+						search.tzOffset = {
+							'$gte': minutesDiff - 60,
+							'$lt': minutesDiff
+						};
+						rewardsEmbed.setTitle('Reward Times in the Next Hour');
+					}
+				}
+
+				rewardsCollection.find(search).sort({tzOffset: 1, server: 1}).toArray()
+					.then(results => {
+						// If there is any server in our list that doesn't match our default
+						let nonDefaultServer = !!results.filter(r => r.server != config.defaultServer).length;
+
+						if ( ! results.length ) {
+							// If  this is running as a scheduled task, then we don't want to display empty results
+							if ( cron ) { return; }
+							rewardsEmbed.setDescription('No results found.');
+						} else {
+							// console.log( '**SEARCH RESULTS**\n', results )
+							let userList = [];
+							results.forEach(function (r, index) {
+								let userString = `<@${r.userid}>`;
+								if (nonDefaultServer) {
+									userString += ` s${r.server}`;
+								}
+								userList.push(userString);
+
+								if (results[index + 1] == undefined || r.tzOffset != results[index + 1].tzOffset) {
+									let timeTo = [];
+									let minutesTo = minutesDiff - r.tzOffset;
+
+									// If rewards are past, then we want time to tomorrow's rewards
+									if (minutesTo < 0) {
+										minutesTo = (24 * 60) + minutesTo;
+									}
+
+									let hoursTo = Math.floor(minutesTo / 60);
+									if (hoursTo === 1) {
+										timeTo.push('1 hour ');
+									} else if (hoursTo > 1) {
+										timeTo.push(`${hoursTo} hours `);
+									}
+
+									minutesTo = minutesTo % 60;
+									if (minutesTo === 1) {
+										timeTo.push('1 minute ');
+									} else if (minutesTo > 1) {
+										timeTo.push(`${minutesTo} minutes `);
+									}
+
+									timeTo = timeTo.join(' ');
+
+									rewardsEmbed.addField(`GMT${tzOffsetMinutesToString(r.tzOffset)} in ${timeTo}`, userList.join('\n'), true);
+									userList = [];
+								}
+							});
+						}
+						message.channel.send(rewardsEmbed);
+					})
+					.catch(error => console.error(error));
+			})
+			.catch( error => console.error( error ) );
+	},
+
 	execute( message, args ) {
-
-		const config = require('../config.json');
-		const MongoClient = require('mongodb').MongoClient;
-
-
 		MongoClient.connect( config.dbConnectionUrl, { useUnifiedTopology: true } )
 			.then( client => {
 				const db = client.db( config.dbName );
 				const rewardsCollection = db.collection( 'rewards' );
-
-				// Use moment-timezone for timezone handling
-				let moment = require('moment-timezone');
-
-				// Support GMT+-XX format for timezones
-				moment.tz.link([
-					'GMT-12|Etc/GMT+12',
-					'GMT-11|Etc/GMT+11',
-					'GMT-10|Etc/GMT+10',
-					'GMT-9|Etc/GMT+9',
-					'GMT-8|Etc/GMT+8',
-					'GMT-7|Etc/GMT+7',
-					'GMT-6|Etc/GMT+6',
-					'GMT-5|Etc/GMT+5',
-					'GMT-4|Etc/GMT+4',
-					'GMT-3|Etc/GMT+3',
-					'GMT-2|Etc/GMT+2',
-					'GMT-1|Etc/GMT+1',
-					'GMT-0|GMT',
-					'GMT+0|GMT',
-					'GMT+1|Etc/GMT-1',
-					'GMT+2|Etc/GMT-2',
-					'GMT+3|Etc/GMT-3',
-					'GMT+4|Etc/GMT-4',
-					'GMT+5|Etc/GMT-5',
-					'GMT+6|Etc/GMT-6',
-					'GMT+7|Etc/GMT-7',
-					'GMT+8|Etc/GMT-8',
-					'GMT+9|Etc/GMT-9',
-					'GMT+10|Etc/GMT-10',
-					'GMT+11|Etc/GMT-11',
-					'GMT+12|Etc/GMT-12'
-				]);
-
-				// Turns minute-based offsets to an offset string, ex 300 -> +0500 or -150 -> -0230
-				function tzOffsetMinutesToString( m ) {
-					return ((m < 0)?'-':'+') + Math.floor( Math.abs( m ) / 60 ).toString().padStart( 2, '0' ) + ( Math.abs( m ) % 60).toString().padStart( 2, '0' );
-				}
 
 				// Set a reward time
 				if ( 'set' === args[0] ) {
@@ -106,103 +254,8 @@ module.exports = {
 					return;
 				}
 
-				// Embed to display
-				let rewardsEmbed = new Discord.MessageEmbed()
-					.setThumbnail( 'https://heroes-a.akamaihd.net/i/hw-web/promo/pages/kiss_mobile/mobile-logo-en.png' )
-					.setColor( '#9013FE' )
-					.setTitle( 'Reward Times' );
+				this.displayRewards( message, args );
 
-				// Start a search object to fill - empty finds all rewards
-				let search = {};
-
-				let rewardsTime = moment().utc();
-				if (moment().utc().hours() < 8) {
-					rewardsTime.hours(-24);
-				}
-				// Number of minutes between current time and 2000 UTC - essentially offset from rewards time in minutes
-				let minutesDiff = rewardsTime.hours(20).minutes(0).seconds(0).diff(moment().utc(), 'minutes');
-
-				let server;
-				// If "all" rewards weren't requested, then work out search terms
-				if ( 'all' !== args[0] ) {
-					// If specific users were requested
-					if (message.mentions.users.size) {
-						search.userid = {$in: message.mentions.users.map(user => user.id)};
-						rewardsEmbed.setTitle( 'Reward Times for Requested Users' );
-					} else if( args[0] && 's' === args[0].trim()[0] && (server = parseInt( args[0].replace( /^s+/, '' ) ) ) ) {
-						// If a server was specified, such as 's60'
-						search.server = server;
-						rewardsEmbed.setTitle( `Reward Times for Server ${server}` );
-					} else if( args[0] ) {
-						// If there's an argument that's not set, all, or a server - assume it's a timezone
-
-						if ( ! moment.tz.zone( args[0] ) ) {
-							return message.reply( `I don't recognize the \`${args[0]}\` timezone.\nYou can use this list of tz database time zones to find yours if you don't know it - https://en.wikipedia.org/wiki/List_of_tz_database_time_zones` );
-						}
-
-						// get timezone now that we know it's valid and add it's offset to search
-						search.tzOffset = moment.tz( args[0] ).utcOffset();
-						rewardsEmbed.setTitle( `Reward Times for ${args[0]}` );
-					} else {
-						search.tzOffset = {
-							'$gte': minutesDiff - 60,
-							'$lt': minutesDiff
-						};
-						rewardsEmbed.setTitle('Reward Times in the Next Hour');
-					}
-				}
-				// console.log( '**SEARCH**\n', search );
-
-				rewardsCollection.find( search ).sort( { tzOffset: 1, server: 1 } ).toArray()
-					.then( results => {
-						// If there is any server in our list that doesn't match our default
-						let nonDefaultServer = !!results.filter( r => r.server != config.defaultServer ).length;
-
-						if ( !results.length ) {
-							rewardsEmbed.setDescription( 'No results found.' );
-						} else {
-							// console.log( '**SEARCH RESULTS**\n', results )
-							let userList = [];
-							results.forEach(function (r, index) {
-								let userString = `<@${r.userid}>`;
-								if (nonDefaultServer) {
-									userString += ` s${r.server}`;
-								}
-								userList.push(userString);
-
-								if (results[index + 1] == undefined || r.tzOffset != results[index + 1].tzOffset) {
-									let timeTo = [];
-									let minutesTo = minutesDiff - r.tzOffset;
-
-									// If rewards are past, then we want time to tomorrow's rewards
-									if (minutesTo < 0) {
-										minutesTo = (24 * 60) + minutesTo;
-									}
-
-									let hoursTo = Math.floor(minutesTo / 60);
-									if (hoursTo === 1) {
-										timeTo.push('1 hour ');
-									} else if (hoursTo > 1) {
-										timeTo.push(`${hoursTo} hours `);
-									}
-
-									minutesTo = minutesTo % 60;
-									if (minutesTo === 1) {
-										timeTo.push('1 minute ');
-									} else if (minutesTo > 1) {
-										timeTo.push(`${minutesTo} minutes `);
-									}
-
-									timeTo = timeTo.join(' ');
-
-									rewardsEmbed.addField(`GMT${tzOffsetMinutesToString(r.tzOffset)} in ${timeTo}`, userList.join('\n'), true);
-									userList = [];
-								}
-							});
-						}
-						message.channel.send( rewardsEmbed );
-					} )
-					.catch( error => console.error( error ) );
 			})
 			.catch( error => console.error( error ) );
 
