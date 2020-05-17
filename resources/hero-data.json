@@ -1,0 +1,2530 @@
+{
+  "Andvari": {
+    "name": "Andvari",
+    "stone source": "Special Event",
+    "main stat": "Strength",
+    "attack type": "Physical Attack",
+    "role": "Support, Control",
+    "artifacts": {
+      "weapon": "Hand of the Great Master (Armor)",
+      "book": "Alchemist's Folio (Armor Penetration, Physical Attack)",
+      "ring": "Ring of Strength"
+    },
+    "glyphs": {
+      "1": "Physical Attack",
+      "2": "Health",
+      "3": "Armor Penetration",
+      "4": "Armor",
+      "5": "Strength"
+    },
+    "skins": {
+      "1": "Default Skin (Strength)",
+      "2": "Winter Skin (Physical Attack)"
+    },
+    "description": "Andvari doesn't like it when others call him a legend. He believes the Titan Artifacts he created are merely a necessity in the war against evil. However, his talent, honesty, and eagerness to work make it obvious that the element of Earth made the right choice!",
+    "skills": {
+      "White": {
+        "name": " Titan's Fist",
+        "description": "Strikes the nearest Enemy and deal damage with a giant fist. Stunning him and nearby allies for 3 seconds",
+        "calculation": ""
+      },
+      "Green": {
+        "name": " Living Earth",
+        "description": "Passive Skill: Protects all allies behind him from displacement and knock up effects",
+        "calculation": ""
+      },
+      "Blue": {
+        "name": " Stone Grasp",
+        "description": "Summons a stone Hand that targets the lowest health enemy with physical damage, and stunning for 2 seconds",
+        "calculation": ""
+      },
+      "Violet": {
+        "name": " Nature's Barrier",
+        "description": "creates a barrier that shields the lowest Armor ally from physical and pure damage with his ally gaining energy for absorbed damage",
+        "calculation": ""
+      }
+    },
+    "stats": {
+      "intelligence": "",
+      "strength": "",
+      "agility": ""
+    },
+    "image": "https://i.imgur.com/i1lglgo.png"
+  },
+  "Arachne": {
+    "name": "Arachne",
+    "stone source": "Heroic Chest",
+    "main stat": "Agility",
+    "attack type": "Magic Attack",
+    "role": "Warrior, Control",
+    "artifacts": {
+      "weapon": "Hermit Drone (Armor)",
+      "book": "Tome of Arcane Knowledge (Magic Attack, Health)",
+      "ring": "Ring of Intelligence"
+    },
+    "glyphs": {
+      "1": "Magic Attack",
+      "2": "Health",
+      "3": "Armor",
+      "4": "Magic Penetration",
+      "5": "Intelligence"
+    },
+    "skins": {
+      "1": "Default Skin (Intelligence)"
+    },
+    "description": "There’s no trace of humanity left in her: she's a perfect assassin now. Arachne's hypnotic gaze freezes her prey, and her claws tear the unfortunate victim apart.",
+    "skills": {
+      "White": {
+        "name": " Demolition Robot",
+        "description": "Summons a monster that charges at the first enemy it sees, exploding and stunning enemies for 2 seconds.",
+        "calculation": ""
+      },
+      "Green": {
+        "name": " Teleport",
+        "description": "Jumps to the target with the lowest health, attacks it with claws, and jumps back.",
+        "calculation": ""
+      },
+      "Blue": {
+        "name": " Underground Strike",
+        "description": "Strikes the nearest rival, damaging and stunning them and the enemies around them for 3 seconds. (Stun chance lowered if the target's level is above 80.)",
+        "calculation": ""
+      },
+      "Violet": {
+        "name": " Neurotoxin",
+        "description": "Any damage received from Arachne, poisons the enemy for 3 seconds.",
+        "calculation": ""
+      }
+    },
+    "stats": {
+      "intelligence": "",
+      "strength": "",
+      "agility": ""
+    },
+    "image": "https://i.imgur.com/SRdjLUK.png"
+  },
+  "Artemis": {
+    "name": "Artemis",
+    "stone source": "Campaign",
+    "main stat": "Agility",
+    "attack type": "Physical Attack",
+    "role": "Marksman",
+    "artifacts": {
+      "weapon": "Evil's Bane (Physical Attack)",
+      "book": "Alchemist's Folio (Armor Penetration, Physical Attack)",
+      "ring": "Ring of Agility"
+    },
+    "glyphs": {
+      "1": "Physical Attack",
+      "2": "Health",
+      "3": "Armor Penetration",
+      "4": "Crit Hit Chance",
+      "5": "Agility"
+    },
+    "skins": {
+      "1": "Default Skin (Agility)",
+      "2": "Angel Skin (Critical Hit)",
+      "3": "Devil Skin (Physical Attack)",
+      "4": "Spring Skin (Armor Penetration)"
+    },
+    "description": "The huntress fades into a shadow in the night. Reaching the sorceress, she kills her immediately. Remember, witgh, death has a name, and that name is Artemis.",
+    "skills": {
+      "White": {
+        "name": " Deadly Shower",
+        "description": "Artemis launches a barrage of shots, striking enemies with a rain of arrows. (Damage per arrow = (Physical attack stat + skill level x 100)/10)",
+        "calculation": ""
+      },
+      "Green": {
+        "name": " Smart Arrow",
+        "description": "Fires an arrow at the nearest target that deals damage and bounces to random enemies several times.",
+        "calculation": ""
+      },
+      "Blue": {
+        "name": " True Light",
+        "description": "Creates a flash of light that deals damage to all enemies caught in it and blinds them for 3 seconds.",
+        "calculation": ""
+      },
+      "Violet": {
+        "name": " Punishing Arrows",
+        "description": "Passive skill. With each attach Artemis deals additional damage depending on her remaining health.",
+        "calculation": ""
+      }
+    },
+    "stats": {
+      "intelligence": "",
+      "strength": "",
+      "agility": ""
+    },
+    "image": "https://i.imgur.com/kld2BIf.png"
+  },
+  "Astaroth": {
+    "name": "Astaroth",
+    "stone source": "Campaign",
+    "main stat": "Strength",
+    "attack type": "Magic Attack",
+    "role": "Tank, Support",
+    "artifacts": {
+      "weapon": "Scythe of Redemption (Armor)",
+      "book": "Defender's Covenant (Armor, Magic Defense)",
+      "ring": "Ring of Strength"
+    },
+    "glyphs": {
+      "1": "Magic Attack",
+      "2": "Armor",
+      "3": "Health",
+      "4": "Magic Defense",
+      "5": "Strength"
+    },
+    "skins": {
+      "1": "Default Skin (Strength)",
+      "2": "Devil Skin (Magic Attack)",
+      "3": "Barbarian Skin (Armor)",
+      "4": "Lunar Skin (Magic Defense)"
+    },
+    "description": "Astaroth's scorching blade emanates unbearable heat. His eyes burn with infernal flame. Rejected by God, this angel was filled with rage. His only goal is to burn this world to ashes.",
+    "skills": {
+      "White": {
+        "name": " Flame Veil",
+        "description": "Casts a shield that blocks physical damage on the entire team. The shield's capacity is shared between all team members. (100% magic attack + 1000 + 100 • level)\n\nThe shield does not persist between fights in the campaign.",
+        "calculation": ""
+      },
+      "Green": {
+        "name": " Devastation",
+        "description": "Astaroth spews a flare of hellfire, burning up some of the energy accumulated by the furthest enemy. If the opponent's level is above the skill level, the chance to burn their energy is decreased. (25% + .1 • level)",
+        "calculation": ""
+      },
+      "Blue": {
+        "name": " Demon's Allegiance",
+        "description": "Passive Skill: Astaroth maintains a connection with the ally who has the least health left and takes on a part of the physical damage inflicted against that ally. The transferred damage is also reduced. (Transfers 37% + .1 • level % of physical damage. An extra 18% + .15 • level % is subtracted from the transferred damage)",
+        "calculation": ""
+      },
+      "Violet": {
+        "name": " Last Word",
+        "description": "Once per battle, Astaroth resurrects a fallen ally or himself. (health restored by the resurrection 100% magic attack +15000 + 250 • level)",
+        "calculation": ""
+      }
+    },
+    "stats": {
+      "intelligence": "",
+      "strength": "",
+      "agility": ""
+    },
+    "image": "https://i.imgur.com/w3ckIV0.png"
+  },
+  "Astrid_and_Lucas": {
+    "name": "Astrid and Lucas",
+    "stone source": "",
+    "main stat": "Agility",
+    "attack type": "Marksman",
+    "role": "Warrior",
+    "artifacts": {
+      "weapon": "Princess' Musket",
+      "book": "Alchemist's Folio",
+      "ring": "Ring of Agility"
+    },
+    "glyphs": {
+      "1": "Physical Attack",
+      "2": "Health",
+      "3": "Armor",
+      "4": "Armor Penetration",
+      "5": "Agility"
+    },
+    "skins": {
+      "1": "Default Skin (Agility)",
+      "2": "Devil Skin (Physical Attack)",
+      "3": "Spring Skin (Physical Attack)",
+      "4": "Romantic Skin (Armor Penetrationi)"
+    },
+    "description": "Astrid embraced the furry neck of her pet. Lucas didn't mind, for it could understand she needed it more than before. It was only yesterday that the young woman's eyes were full of life, and now her gaze was stern, frigid. Everything they had to go through fused their hearts into one.",
+    "skills": {
+      "White": {
+        "name": " Go For It, Lucas!",
+        "description": "Astrid's pet transforms into rage form and rushes to the front row, taking the enemy's attacks on itself. It takes no damage from the attacks, but each attack abates its rage until the pet reverts to its passive form.",
+        "calculation": ""
+      },
+      "Green": {
+        "name": " Rampant Nature",
+        "description": "Astrid increases her attack speed and skill speed by 9 seconds. If Lucas is in rage form, the increases affect it instead of Astrid.",
+        "calculation": ""
+      },
+      "Blue": {
+        "name": " Predator's Charge",
+        "description": "Passive Skill. As long as Lucas is in rage form, each consecutive attack deals increasing damage.",
+        "calculation": ""
+      },
+      "Violet": {
+        "name": " Tracker's Mark",
+        "description": "Passive Skill. Each of Astrid's attacks marks the target hi with the Tracker's mark for 4 seconds. If Lucas hits a marked enemy it is stunned for a short time.",
+        "calculation": ""
+      }
+    },
+    "stats": {
+      "intelligence": "",
+      "strength": "",
+      "agility": ""
+    },
+    "image": "https://i.imgur.com/RwNEsh1.png"
+  },
+  "Aurora": {
+    "name": "Aurora",
+    "stone source": "Campaign",
+    "main stat": "Strength",
+    "attack type": "Magic Attack",
+    "role": "Tank",
+    "artifacts": {
+      "weapon": "Selias' Legacy (Dodge)",
+      "book": "Book of Illusions (Dodge, Health)",
+      "ring": "Ring of Strength"
+    },
+    "glyphs": {
+      "1": "Magic Attack",
+      "2": "Health",
+      "3": "Magic Penetration",
+      "4": "Dodge",
+      "5": "Strength"
+    },
+    "skins": {
+      "1": "Default (Strength)",
+      "2": "Nordic Skin (Dodge)",
+      "3": "Spring Skin (Health)",
+      "4": "Devil Skin (Armor)"
+    },
+    "description": "As a child Aurora chose to follow the light.She left her house and went a long way to finally receive the title of Paladin of Riversar, thus becoming a protector and lantern for her people.",
+    "skills": {
+      "White": {
+        "name": " Crystal of Selias",
+        "description": "Group MA damage.",
+        "calculation": ""
+      },
+      "Green": {
+        "name": " Crystalline Onslaught",
+        "description": "Stun and MA damage to 1 nearby target. Stun chance lower if target level < skill level.",
+        "calculation": ""
+      },
+      "Blue": {
+        "name": " Piercing Light",
+        "description": "MA damage to targets along a line.",
+        "calculation": ""
+      },
+      "Violet": {
+        "name": " Rainbow Halo",
+        "description": "Passive. Partially absorbs magic damage. Explodes for damage when full. 40% absorption to start.",
+        "calculation": ""
+      }
+    },
+    "stats": {
+      "intelligence": "",
+      "strength": "",
+      "agility": ""
+    },
+    "image": "https://i.imgur.com/3YxqaoK.png"
+  },
+  "Celeste": {
+    "name": "Celeste",
+    "stone source": "Heroic Chest, Campaign(FB)",
+    "main stat": "Intelligence",
+    "attack type": "Magic Attack",
+    "role": "Healer, Control",
+    "artifacts": {
+      "weapon": "Celeste's Crown",
+      "book": "Manuscript of the Void (Magic Penetration, Magic Attack)",
+      "ring": "Ring of Intelligence"
+    },
+    "glyphs": {
+      "1": "Magic Attack",
+      "2": "Health",
+      "3": "Magic Defense",
+      "4": "Magic Penetration",
+      "5": "Intelligence"
+    },
+    "skins": {
+      "1": "Default Skin (Intelligence)",
+      "2": "Winter Skin (Magic Attack)",
+      "3": "Spring Skin (Magic Attack)"
+    },
+    "description": "Just like day flows into night, Celeste changes her form. Gleaming sunlight grants life while the shadow of night opens up her darker traits. Nobody knows if she can keep that delicate balance under control for much longer...",
+    "skills": {
+      "White": {
+        "name": " Two Fates",
+        "description": "Celeste switches between light and dark forms. When switching to light, she creates a purifying sphere that heals the ally with least health for five seconds. When switching to dark, she creates an area of cursed flame among the enemies, the damage from which cannot be cured.",
+        "calculation": ""
+      },
+      "Green": {
+        "name": " White Night",
+        "description": "When dark, she surrounds the nearest enemy with cursed flame. When light shes cures the ally with the least health.",
+        "calculation": ""
+      },
+      "Blue": {
+        "name": " Limbo",
+        "description": "Cursed flames will change healing sent to flame damaged enemy into additional damage. The purifying sphere clears and blocks all negative effects of the ally before disappearing.",
+        "calculation": ""
+      },
+      "Violet": {
+        "name": " Zenith",
+        "description": "When dark, basic attacks deal magic damage and when light target allies with healing.",
+        "calculation": ""
+      }
+    },
+    "stats": {
+      "intelligence": "",
+      "strength": "",
+      "agility": ""
+    },
+    "image": "https://i.imgur.com/edtYU3q.png"
+  },
+  "Chabba": {
+    "name": "Chabba",
+    "stone source": "Arena Shop",
+    "main stat": "Strength",
+    "attack type": "Physical",
+    "role": "Tank, Control",
+    "artifacts": {
+      "weapon": "Bracers of Hunger",
+      "book": "Defender's Covenant",
+      "ring": "Ring of Strength"
+    },
+    "glyphs": {
+      "1": "Physical Attack",
+      "2": "Armor",
+      "3": "Magic Defence",
+      "4": "Health",
+      "5": "Strength"
+    },
+    "skins": {
+      "1": "Default(Strength)",
+      "2": "Devil Skin(Physical Attack)",
+      "3": "Winter Skin(Armor)",
+      "4": "Masquerade Skin(Physical Attack)"
+    },
+    "description": "Chabba loves every kind of food in the world, but especially Haan-style cutlets. Chabba has thick, impenetrable skin, which means nobody can stop him on his quest for tasty treats.",
+    "skills": {
+      "White": {
+        "name": " Wild Hunger",
+        "description": "Swallows the current target for 6 seconds. While the target is swallowed, it slowly receives damage. Depends on Physical Attack.",
+        "calculation": ""
+      },
+      "Green": {
+        "name": " Burp",
+        "description": "Damages nearby enemies, slowing them for 4 seconds. Depends on Physical Attack.",
+        "calculation": ""
+      },
+      "Blue": {
+        "name": " Fat Layer",
+        "description": "Increases armor, proportionally to missing health. Depends on Physical Attack.",
+        "calculation": ""
+      },
+      "Violet": {
+        "name": " Bottomless Belly",
+        "description": "Now Chabba restores health by digesting the swallowed enemy.",
+        "calculation": ""
+      }
+    },
+    "stats": {
+      "intelligence": "",
+      "strength": "",
+      "agility": ""
+    },
+    "image": "https://i.imgur.com/3F52YnW.png"
+  },
+  "Cleaver": {
+    "name": "Cleaver",
+    "stone source": "",
+    "main stat": "",
+    "attack type": "",
+    "role": "",
+    "artifacts": {
+      "weapon": "",
+      "book": "",
+      "ring": ""
+    },
+    "glyphs": {
+      "1": "",
+      "2": "",
+      "3": "",
+      "4": "",
+      "5": ""
+    },
+    "skins": {
+      "1": ""
+    },
+    "description": "",
+    "skills": {
+      "White": {
+        "name": " Rusty Hook",
+        "description": "Cleaver throws a hook at a distant opponent, dealing damage, and pulls them to himself.",
+        "calculation": ""
+      },
+      "Green": {
+        "name": " Putrefaction",
+        "description": "Deals pure damage to the nearest opponents and himself for 5 seconds.",
+        "calculation": ""
+      },
+      "Blue": {
+        "name": " Mutilation",
+        "description": "Hits the area in front of him with his cleaver, dealing damage and stunning opponents.",
+        "calculation": ""
+      },
+      "Violet": {
+        "name": " Heavyweight",
+        "description": "Passive skill. Cleaver receives additional Strength.",
+        "calculation": ""
+      }
+    },
+    "stats": {
+      "intelligence": "",
+      "strength": "",
+      "agility": ""
+    },
+    "image": "https://i.imgur.com/AMdamcz.png"
+  },
+  "Cornelius": {
+    "name": "Cornelius",
+    "stone source": "Highway Shop, Friendship Shop (FB)",
+    "main stat": "Intelligence",
+    "attack type": "Magic Attack",
+    "role": "Mage, Support",
+    "artifacts": {
+      "weapon": "Archivist's Staff (Magic Defense)",
+      "book": "Tome of Arcane Knowledge (Magic Attack, Health)",
+      "ring": "Ring of Intelligence"
+    },
+    "glyphs": {
+      "1": "Magic Attack",
+      "2": "Health",
+      "3": "Armor",
+      "4": "Magic Defense",
+      "5": "Intelligence"
+    },
+    "skins": {
+      "1": "Default Skin (Intelligence)",
+      "2": "Stellar Skin (Health)",
+      "3": "Angel Skin (Magic Attack)",
+      "4": "Masquerade Skin (Magic Attack)"
+    },
+    "description": "After the dark mages raided the university, scholar Cornelius Witt was believed to be dead. In fact, he was held captive by the enemy for about two years. The mages' spell tortures not only failed to break him down, but also helped him discover a new ability, the suppression of magic. He used to escape and joined the ranks of Guardians.",
+    "skills": {
+      "White": {
+        "name": " Heavy Wisdom",
+        "description": "Hits the enemy with the highest Intelligence with a monolith, dealing physical damage proportionally to their Intelligence.",
+        "calculation": ""
+      },
+      "Green": {
+        "name": " Rune of Suppression",
+        "description": "An ancient spell which hits the enemy with the highest Magic Attack and reduces their Attack for the next 12 seconds. Depends on Magic Attack.",
+        "calculation": ""
+      },
+      "Blue": {
+        "name": " Protective Dome",
+        "description": "Cornelius casts a barrier on the team, increasing their Magic Defense for 6 seconds. Depends on Magic Attack.",
+        "calculation": ""
+      },
+      "Violet": {
+        "name": " Memory Loss",
+        "description": "Cornelius curses a random enemy at the beginning of the battle, reducing the level of their first skill. If Cornelius dies, the curse will disappear.",
+        "calculation": ""
+      }
+    },
+    "stats": {
+      "intelligence": "",
+      "strength": "",
+      "agility": ""
+    },
+    "image": "https://i.imgur.com/f6M2TWm.png"
+  },
+  "Dante": {
+    "name": "Dante",
+    "stone source": "",
+    "main stat": "",
+    "attack type": "",
+    "role": "",
+    "artifacts": {
+      "weapon": "",
+      "book": "",
+      "ring": ""
+    },
+    "glyphs": {
+      "1": "",
+      "2": "",
+      "3": "",
+      "4": "",
+      "5": ""
+    },
+    "skins": {
+      "1": ""
+    },
+    "description": "",
+    "skills": {
+      "White": {
+        "name": " Instrument of Fate",
+        "description": "Throws a ghost spear passing through the enemies. Deals decreasing damage on each successive enemy it hits",
+        "calculation": ""
+      },
+      "Green": {
+        "name": " Haze",
+        "description": "Creates a shield that blocks all damage and negative effects for 2,5 seconds",
+        "calculation": ""
+      },
+      "Blue": {
+        "name": " Spiritual Bond",
+        "description": "Binds Dante to a random ally and increases their speed for 4 seconds",
+        "calculation": ""
+      },
+      "Violet": {
+        "name": " Phantom Pain",
+        "description": "Passive skill: Improves Agility for all Heros",
+        "calculation": ""
+      }
+    },
+    "stats": {
+      "intelligence": "",
+      "strength": "",
+      "agility": ""
+    },
+    "image": "https://i.imgur.com/f1TUNw1.png"
+  },
+  "Daredevil": {
+    "name": "Daredevil",
+    "stone source": "Campaign",
+    "main stat": "Agility",
+    "attack type": "Physical Attack",
+    "role": "Marksman",
+    "artifacts": {
+      "weapon": "On and Off (Physical attack)",
+      "book": "Warrior's Code (Physical attack, Crit hit chance)",
+      "ring": "Ring of Agility"
+    },
+    "glyphs": {
+      "1": "Physical attack",
+      "2": "Health",
+      "3": "Armor penetration",
+      "4": "Crit hit chance",
+      "5": "Agility"
+    },
+    "skins": {
+      "1": "Standard Skin (Agility)",
+      "2": "Rowdy Skin (Crit hit chance)",
+      "3": "Romantic Skin (Health)"
+    },
+    "description": "What is life? Life is an endless war. How to become happy in life? Start enjoying this war obviously. Daredevil doesn't care about her lost arm as the new one, made of steel, is much, much cooler. She plays it really close to the edge each and every day and she knows the real taste of life!",
+    "skills": {
+      "White": {
+        "name": " Big Badda Boom!",
+        "description": "Throws a bomb at the center of the enemy team. The explosion deals damage to the affected enemies, sets them on fire for 7 seconds, and pushes them away.",
+        "calculation": ""
+      },
+      "Green": {
+        "name": " Discharge!",
+        "description": "Electrocutes the nearest enemy, dealing damage. The target and other enemies close to them are stunned for 1 second, and their attack speed and movement speed are decreased for 3 seconds.",
+        "calculation": ""
+      },
+      "Blue": {
+        "name": " Firefight",
+        "description": "Fires an incendiary shell at the nearest enemy, dealing damage and setting them and other nearby enemies on fire for 5 seconds.",
+        "calculation": ""
+      },
+      "Violet": {
+        "name": " Thirst for Blood",
+        "description": "Daredevil ignores a portion of the armor of enemies she has set on fire.",
+        "calculation": ""
+      }
+    },
+    "stats": {
+      "intelligence": "",
+      "strength": "",
+      "agility": ""
+    },
+    "image": "https://i.imgur.com/F0cX3zw.png"
+  },
+  "Dark Star": {
+    "name": "Dark Star",
+    "stone source": "Arena Shop",
+    "main stat": "Agility",
+    "attack type": "Physical Attack",
+    "role": "Marksman, Control",
+    "artifacts": {
+      "weapon": "Arelon's Weeping (Physical Attack)",
+      "book": "Alchemist's Folio (Physical Attack, Armor Penetration)",
+      "ring": "Ring of Agility"
+    },
+    "glyphs": {
+      "1": "Physical Attack",
+      "2": "Health",
+      "3": "Armor Penetration",
+      "4": "Dodge",
+      "5": "Agility"
+    },
+    "skins": {
+      "1": "Default Skin (Agility)",
+      "2": "Nordic Skin (Dodge)",
+      "3": "Spring Skin (Physical Attack)",
+      "4": "Lunar Skin (Armor Penetration)"
+    },
+    "description": "",
+    "skills": {
+      "White": {
+        "name": " Black Arrows",
+        "description": "Shoots two arrows at distant targets, damaging and stunning them for 3 seconds. Stun chance is lowered if the target's level is above the level of the skill.",
+        "calculation": ""
+      },
+      "Green": {
+        "name": " Vengeful Souls",
+        "description": "Dark Star uses sonic waves to slow and deal damage to rivals. Can slow enemies with a higher level then the skill.",
+        "calculation": ""
+      },
+      "Blue": {
+        "name": " Control",
+        "description": "Forces the nearest target to fight on the caster's side fo 4 seconds. Success chance lowered if the target's level is above (skill level + 20).",
+        "calculation": ""
+      },
+      "Violet": {
+        "name": " Partner",
+        "description": "After every shot Dark Star creates a shadow that attacks the next enemy, dealing damage based on physical attack. The shadow's arrows deal 25.5% +.5% • level.",
+        "calculation": ""
+      }
+    },
+    "stats": {
+      "intelligence": "",
+      "strength": "",
+      "agility": ""
+    },
+    "image": "https://i.imgur.com/wGGYOY3.png"
+  },
+  "Dorian": {
+    "name": "Dorian",
+    "stone source": "Hero Chest",
+    "main stat": "Intelligence",
+    "attack type": "Magic Attack",
+    "role": "Support, Healer",
+    "artifacts": {
+      "weapon": "Bleeding Steel (Physical Attack)",
+      "book": "Tome of Arcane Knowledge (Magic Attack, Health)",
+      "ring": "Ring of Intelligence"
+    },
+    "glyphs": {
+      "1": "Magic Attack",
+      "2": "Health",
+      "3": "Armor",
+      "4": "Magic Defense",
+      "5": "Intelligence"
+    },
+    "skins": {
+      "1": "Default Skin (Intelligence)",
+      "2": "Champion's Skin (Magic Attack)",
+      "3": "Romantic Skin (Health)",
+      "4": "Masquerade Skin (Armor)"
+    },
+    "description": "",
+    "skills": {
+      "White": {
+        "name": " Fountain of Blood",
+        "description": "Casts a blood mark on the nearest rival for 7 seconds. Allies recover health whenever they attack a marked enemy. Recovered health: 25% + (1 • skill level).",
+        "calculation": ""
+      },
+      "Green": {
+        "name": " Ancestors' Amulet",
+        "description": "Dorian sacrifices 20% of his current health and heals an ally with lowest health. Ally healing: 100% • 1 per 2 skill levels.",
+        "calculation": ""
+      },
+      "Blue": {
+        "name": " Wings of Night",
+        "description": "Releases a flock of bats which hit the opponents twice. When returned to the owner, they replenish his health at the 100% amount of the damage done. Damage depends on magic attack.",
+        "calculation": ""
+      },
+      "Violet": {
+        "name": " Initiation",
+        "description": "Increases Vampirism of nearby allies. Vampirism Aura is 25% + 1 • skill level",
+        "calculation": ""
+      }
+    },
+    "stats": {
+      "intelligence": "",
+      "strength": "",
+      "agility": ""
+    },
+    "image": "https://i.imgur.com/fLmqjFr.png"
+  },
+  "Elmir": {
+    "name": "Elmir",
+    "stone source": "",
+    "main stat": "",
+    "attack type": "",
+    "role": "",
+    "artifacts": {
+      "weapon": "",
+      "book": "",
+      "ring": ""
+    },
+    "glyphs": {
+      "1": "",
+      "2": "",
+      "3": "",
+      "4": "",
+      "5": ""
+    },
+    "skins": {
+      "1": ""
+    },
+    "description": "",
+    "skills": {
+      "White": {
+        "name": " Shifting Sands",
+        "description": "Moves to the far line, uses his second skill if applicable, and fires off ranged attacks for 10 seconds, with a physical attack bonus while active",
+        "calculation": ""
+      },
+      "Green": {
+        "name": " Mirage",
+        "description": "Elmir creates a sand clone of himself with 70 of his health, but it cannot receive help from allies or regenerate health",
+        "calculation": ""
+      },
+      "Blue": {
+        "name": " Perfect Blades",
+        "description": "Allows sand clones to attack enemies",
+        "calculation": ""
+      },
+      "Violet": {
+        "name": " Many Truth",
+        "description": "Allows Elmir to create two or four sand clones at the same time",
+        "calculation": ""
+      }
+    },
+    "stats": {
+      "intelligence": "",
+      "strength": "",
+      "agility": ""
+    },
+    "image": "https://i.imgur.com/vrFBQaS.png"
+  },
+  "Faceless": {
+    "name": "Faceless",
+    "stone source": "Highwayman Shop, Friendship Shop (FB)",
+    "main stat": "Intelligence",
+    "attack type": "Magic Attack",
+    "role": "Mage, Control",
+    "artifacts": {
+      "weapon": "Hermit's Shroud (Magic Penetration)",
+      "book": "Manuscript of the Void (Magic Penetration, Magic Attack)",
+      "ring": "Ring of Intelligence"
+    },
+    "glyphs": {
+      "1": "Magic Attack",
+      "2": "Health",
+      "3": "Physical Attack",
+      "4": "Magic Penetration",
+      "5": "Intelligence"
+    },
+    "skins": {
+      "1": "Default Skin (Intelligence)",
+      "2": "Stellar Skin (Magic Attack)",
+      "3": "Masquerade Skin (Health)"
+    },
+    "description": "Faceless, the best apprentice at the School of Mystics, was never especially favored by his mentors. A silent type who had a unique talent, he scared people around him. Nobody knows what's hiding behind his dark mask...",
+    "skills": {
+      "Green": {
+        "name": " Power Throw",
+        "description": "Raises the nearest enemy above the ground, then drops them at the center of the enemy team. Deals damage and stuns all enemies in the effective range for 2 seconds. (Chance to stun is lowered if the target's level is above skill's level.)",
+        "calculation": ""
+      },
+      "Blue": {
+        "name": " Chain Lightning",
+        "description": "Throws a ricocheting magic missile that hits 3 enemies. Deals damage and lowers the target's physical attack for 4 seconds.",
+        "calculation": ""
+      },
+      "Violet": {
+        "name": " Spell Expert",
+        "description": "Passive skill. Increases the team's magic defense.",
+        "calculation": ""
+      }
+    },
+    "stats": {
+      "intelligence": "",
+      "strength": "",
+      "agility": ""
+    },
+    "image": "https://i.imgur.com/qJ3mflF.png"
+  },
+  "Fox": {
+    "name": "Fox",
+    "stone source": "Campaign",
+    "main stat": "Agility",
+    "attack type": "Physical Attack",
+    "role": "Marksman",
+    "artifacts": {
+      "weapon": "Shrapnel Cannon (Armor Penetration)",
+      "book": "Alchemist's Folio (Armor Penetration, Physical Attack)",
+      "ring": "Ring of Agility"
+    },
+    "glyphs": {
+      "1": "Physical Attack",
+      "2": "Armor",
+      "3": "Armor Penetration",
+      "4": "Crit Hit Chance",
+      "5": "Agility"
+    },
+    "skins": {
+      "1": "Default Skin (Agility)",
+      "2": "Winter Skin (Physical Attack)",
+      "3": "Spring Skin (Health)",
+      "4": "None"
+    },
+    "description": "Nobody has ever seen an expression of anger or doubt on this cute face. On the contrary, Fox is like a bright light in the darkness, filling her allies' hearts with joy and courage. Once she grabs her gun, the enemy has no chance.",
+    "skills": {
+      "White": {
+        "name": " Heavy Caliber",
+        "description": "Fires a heavy projectile at the nearest target , dealing physical damage and throwing the target back.",
+        "calculation": ""
+      },
+      "Green": {
+        "name": " Smoke Screen",
+        "description": "Fire's a smoke grenade into the enemy's front row, blinding nearby heroes for 6 seconds. The heavy caliber skill may now also blinds the enemy's front row.",
+        "calculation": ""
+      },
+      "Blue": {
+        "name": " Cannonade",
+        "description": "Shoots the nearest target six times.",
+        "calculation": ""
+      },
+      "Violet": {
+        "name": " Concussion",
+        "description": "Passive skill; Heavy Caliber stuns the target for 5 seconds.",
+        "calculation": ""
+      }
+    },
+    "stats": {
+      "intelligence": "",
+      "strength": "",
+      "agility": ""
+    },
+    "image": "https://i.imgur.com/AFQF03X.png"
+  },
+  "Galahad": {
+    "name": "Galahad",
+    "stone source": "Campaign",
+    "main stat": "Strength",
+    "attack type": "Physical Attack",
+    "role": "Tank",
+    "artifacts": {
+      "weapon": "Harunian Sword (Physical Attack)",
+      "book": "Defender's Covenant (Armor, Magic Defense)",
+      "ring": "Ring of Strength"
+    },
+    "glyphs": {
+      "1": "Physical Attack",
+      "2": "Armor",
+      "3": "Health",
+      "4": "Magic Defense",
+      "5": "Strength"
+    },
+    "skins": {
+      "1": "Default Skin (Strength)",
+      "2": "Angel Skin (Physical Attack)",
+      "3": "Champion's Skin (Health)\n[[File:Galahad (Champion's Skin).jpg",
+      "4": "Romantic Skin (Armor)"
+    },
+    "description": "Knowing no fear or doubt, sturdy as Harunian steel, Galahad moves only forward. His confidence in himself and his allies has kept the great warrior strong for many years.",
+    "skills": {
+      "White": {
+        "name": " Iron Skies",
+        "description": "Galahad brings down swords of justice on the enemies' heads. Depends on Physical Attack.",
+        "calculation": ""
+      },
+      "Green": {
+        "name": " Unstoppable Charge",
+        "description": "Dashes forward, removing control effects and dealing damage to enemies nearby. Depends on Physical Attack.",
+        "calculation": ""
+      },
+      "Blue": {
+        "name": " Retaliation",
+        "description": "Performs a special move, striking the enemy with the lowest health.",
+        "calculation": ""
+      },
+      "Violet": {
+        "name": " Harun's Pride",
+        "description": "The Iron Skies skill now deals an extra X damage. Depends on Physical Attack.",
+        "calculation": ""
+      }
+    },
+    "stats": {
+      "intelligence": "",
+      "strength": "",
+      "agility": ""
+    },
+    "image": "https://i.imgur.com/WPb7zQ5.png"
+  },
+  "Ginger": {
+    "name": "Ginger",
+    "stone source": "Campaign",
+    "main stat": "Agility",
+    "attack type": "Physical Attack",
+    "role": "Marksman",
+    "artifacts": {
+      "weapon": "Noble Mk.2 (Physical Attack)",
+      "book": "Alchemist's Folio (Armor Penetration, Physical Attack)",
+      "ring": "Ring of Agility"
+    },
+    "glyphs": {
+      "1": "Physical Attack",
+      "2": "Health",
+      "3": "Magic Defense",
+      "4": "Armor Penetration",
+      "5": "Agility"
+    },
+    "skins": {
+      "1": "Default Skin (Agility)",
+      "2": "Devil Skin (Physical Attack)",
+      "3": "Champion's Skin (Physical Attack)",
+      "4": "Spring Skin (Armor Penetration)"
+    },
+    "description": "Duke's daughter Ginger Hayes isn't fond of noble evenings and quiet gossips.She is very into science and modern technology, using its powers to protect the innocent from the offspring of darkness. The best helper here is her own creation - the chain-gun \"Noble.\"",
+    "skills": {
+      "White": {
+        "name": " Lead Storm",
+        "description": "7 quick rounds of PA damage to all.",
+        "calculation": ""
+      },
+      "Green": {
+        "name": " Penetrating Shot",
+        "description": "Hits an enemy and the enemy directly behind.",
+        "calculation": ""
+      },
+      "Blue": {
+        "name": " Suppressive Fire",
+        "description": "PA damage to all.",
+        "calculation": ""
+      },
+      "Violet": {
+        "name": " Ranging Shot",
+        "description": "Each consecutive shot gains physical dmg. Effect ends when Ginger gets a control effect or her target dies.",
+        "calculation": ""
+      }
+    },
+    "stats": {
+      "intelligence": "",
+      "strength": "",
+      "agility": ""
+    },
+    "image": "https://i.imgur.com/28WY6lU.png"
+  },
+  "Heidi": {
+    "name": "Heidi",
+    "stone source": "Campaign",
+    "main stat": "Intelligence",
+    "attack type": "Magic Attack",
+    "role": "Mage",
+    "artifacts": {
+      "weapon": "Mean Koba (Dodge)",
+      "book": "Book of Illusions (Dodge, Health)",
+      "ring": "Ring of Intelligence"
+    },
+    "glyphs": {
+      "1": "Magic Attack",
+      "2": "Armor",
+      "3": "Magic Defense",
+      "4": "Dodge",
+      "5": "Intelligence"
+    },
+    "skins": {
+      "1": "Default Skin (Intelligence)"
+    },
+    "description": "",
+    "skills": {
+      "White": {
+        "name": " Deathflower",
+        "description": "Creates a toxic mushroom in the middle of the opponents. Close Opponents will suffer Poison damage every 3 seconds.",
+        "calculation": ""
+      },
+      "Green": {
+        "name": " Toxic Spit",
+        "description": "Shoots Arrow against the closest enemy. Poison does pure damage per 5 seconds",
+        "calculation": ""
+      },
+      "Blue": {
+        "name": " Snake Charmer",
+        "description": "Throws a snake against the weakest opponent. Pure damage",
+        "calculation": ""
+      },
+      "Violet": {
+        "name": " Spy Camo",
+        "description": "Heidi gets camouflage when she doesn't get damaged for some seconds. Dodge will increase by time. Not valid for control effects.",
+        "calculation": ""
+      }
+    },
+    "stats": {
+      "intelligence": "",
+      "strength": "",
+      "agility": ""
+    },
+    "image": "https://i.imgur.com/N0wcp54.png"
+  },
+  "Helios": {
+    "name": "Helios",
+    "stone source": "Campaign",
+    "main stat": "Intelligence",
+    "attack type": "Magic Attack",
+    "role": "Mage, Support",
+    "artifacts": {
+      "weapon": "Wand of the Thousand Suns",
+      "book": "Tome of Arcane Knowledge",
+      "ring": "RIng of Intelligence"
+    },
+    "glyphs": {
+      "1": "Magic Attack",
+      "2": "Health",
+      "3": "Magic Defense",
+      "4": "Armor",
+      "5": "Intelligence"
+    },
+    "skins": {
+      "1": "Standard Skin (Intelligence)",
+      "2": "Champion's Skin (Magic Attack)",
+      "3": "Devil Skin (Health)",
+      "4": "Romantic Skin (Magic Attack)"
+    },
+    "description": "Helios is a star-child. An orphan who tried to catch a fallen star and found his destiny. The cosmic wonder's powerful energy changed the boy forever. Now the stars serve the herald of the Sun, and the celestial rays are his loyal pets.",
+    "skills": {
+      "White": {
+        "name": " Star Birth",
+        "description": "Helios directs 3 new and all existing solar spheres to the frontline of an enemy team where they explode, dealing area damage.",
+        "calculation": ""
+      },
+      "Green": {
+        "name": " Solar Wind",
+        "description": "Summons an invulnerable flamming sphere, dealing damage to nearbt enemies over time for 14 seconds.",
+        "calculation": ""
+      },
+      "Blue": {
+        "name": " Celestial Guardians",
+        "description": "Summons 2 protection spheres at the center of your team. The spheres protect nearby allies by absorbing physical damage dealt to them.",
+        "calculation": ""
+      },
+      "Violet": {
+        "name": " Flaming Retribution",
+        "description": "Each time Helios' allies get critical hit, the flaming sphere may damage the attacker with a fire beam.",
+        "calculation": ""
+      }
+    },
+    "stats": {
+      "intelligence": "",
+      "strength": "",
+      "agility": ""
+    },
+    "image": "https://i.imgur.com/KvWDwvH.png"
+  },
+  "Ishmael": {
+    "name": "Ishmael",
+    "stone source": "[[Grand Arena]]",
+    "main stat": "Agility",
+    "attack type": "Physical Attack",
+    "role": "[[:Category:Warriors",
+    "artifacts": {
+      "weapon": "Hidden Demon's Katars (Crit Hit Chance)",
+      "book": "Alchemist's Folio (Armor Penetration, Physical Attack)",
+      "ring": "Ring of Agility"
+    },
+    "glyphs": {
+      "1": "Physical Attack",
+      "2": "Health",
+      "3": "Armor Penetration",
+      "4": "Crit Hit Chance",
+      "5": "Agility"
+    },
+    "skins": {
+      "1": "Default Skin (Agility)"
+    },
+    "description": "",
+    "skills": {
+      "Green": {
+        "name": " Mirage",
+        "description": "Dodges physical attacks for 3 seconds",
+        "calculation": ""
+      },
+      "Blue": {
+        "name": " Dark Craft",
+        "description": "Passive skill. Increases vampirism",
+        "calculation": ""
+      },
+      "Violet": {
+        "name": " Storm Blades",
+        "description": "Every 4th hit stuns the opponent for 1 round",
+        "calculation": ""
+      }
+    },
+    "stats": {
+      "intelligence": "",
+      "strength": "",
+      "agility": ""
+    },
+    "image": "https://i.imgur.com/SWVnrnh.png"
+  },
+  "Jet": {
+    "name": "Jet",
+    "stone source": "",
+    "main stat": "",
+    "attack type": "",
+    "role": "",
+    "artifacts": {
+      "weapon": "",
+      "book": "",
+      "ring": ""
+    },
+    "glyphs": {
+      "1": "",
+      "2": "",
+      "3": "",
+      "4": "",
+      "5": ""
+    },
+    "skins": {
+      "1": ""
+    },
+    "description": "",
+    "skills": {
+      "White": {
+        "name": " Elixir of Vigor",
+        "description": "Channels life energy to the ally with the highest physical attack stats. Ally gets physical attack and speed boost and regenerates health until Jet runs out of energy or gets interrupted",
+        "calculation": ""
+      },
+      "Green": {
+        "name": " Acid Shot",
+        "description": "Fires acid against the hero with the highest armor stats, reducing the stats for 8 seconds",
+        "calculation": ""
+      },
+      "Blue": {
+        "name": " Poison of Fatigue",
+        "description": "Throws a bottle of poison against the next enemy. This enemy can't regenerate health for the next 8 seconds",
+        "calculation": ""
+      },
+      "Violet": {
+        "name": " Inordinate Fury",
+        "description": "Passive skill: increases the critical hit chance for all allies as long as he is alive",
+        "calculation": ""
+      }
+    },
+    "stats": {
+      "intelligence": "",
+      "strength": "",
+      "agility": ""
+    },
+    "image": "https://i.imgur.com/rF6SPOC.png"
+  },
+  "Jhu": {
+    "name": "Jhu",
+    "stone source": "Guild War Shop",
+    "main stat": "Strength",
+    "attack type": "Physical",
+    "role": "",
+    "artifacts": {
+      "weapon": "Zarakkar Bones",
+      "book": "Warrior's Code",
+      "ring": "Ring of Strength"
+    },
+    "glyphs": {
+      "1": "Physical Attack",
+      "2": "Health",
+      "3": "Armor Penetration",
+      "4": "Crit Hit Chance",
+      "5": "Strength"
+    },
+    "skins": {
+      "1": "Default (Strength)",
+      "2": "Winter Skin (Armor Penetration)",
+      "3": "Champion's Skin (Magic Defense)",
+      "4": "Solar Skin (Crit Hit Chance)"
+    },
+    "description": "",
+    "skills": {
+      "White": {
+        "name": " You will not stop me",
+        "description": "Jhu becomes enraged for 7 seconds, significantly increasing his attack speed. While enraged, Jhu cannot die.\n\nSpeed Bonus.",
+        "calculation": ""
+      },
+      "Green": {
+        "name": " I will take your life",
+        "description": "Each of Jhu's attacks deals additional pure damage to the target while sacrificing 2% of their own current health.\n\nExtra damage: X% of the enemy's current health.",
+        "calculation": ""
+      },
+      "Blue": {
+        "name": " I see you",
+        "description": "For a period of time Jhu, increases his attack power and focuses his attacks on a ranged enemy. Depends on Physical Attack.\n\nExtra Damage: (25% Phys. atk. + X)\n\nDuration: X sec.",
+        "calculation": ""
+      },
+      "Violet": {
+        "name": " The spirits will heal me",
+        "description": "If Jhu is not under control effects after the first skill is used, he regenerates some health. Depends on Physical Attack.\n\nRecovered health: (65% Phys. atk+1000)",
+        "calculation": ""
+      }
+    },
+    "stats": {
+      "intelligence": "",
+      "strength": "",
+      "agility": ""
+    },
+    "image": "https://i.imgur.com/Byrmxic.png"
+  },
+  "Jorgen": {
+    "name": "Jorgen",
+    "stone source": "Outland Shop",
+    "main stat": "Strength",
+    "attack type": "Magic Attack",
+    "role": "Control, Support",
+    "artifacts": {
+      "weapon": "Shavarakk's Blood (Magic Attack)",
+      "book": "Defender's Covenant (Armor, Magic Defense)",
+      "ring": "Ring of Strength"
+    },
+    "glyphs": {
+      "1": "Magic Attack",
+      "2": "Health",
+      "3": "Armor",
+      "4": "Magic Defense",
+      "5": "Strength"
+    },
+    "skins": {
+      "1": "Default Skin (Strength)"
+    },
+    "description": "\"You are ready to learn arcane knowledge, disciple. But first prove your loyalty to Darkness. Take your brother's life, and his immortal soul!\" the wizard yelled. But he, nor anyone else, could have predicted how this tragedy would end...",
+    "skills": {
+      "White": {
+        "name": " Torment of Powerlessness",
+        "description": "Jorgen summons a skull to the enemy’s front line which deals magic damage to nearby heroes. Affected enemies can not gain energy for 9 seconds.",
+        "calculation": ""
+      },
+      "Green": {
+        "name": " Cycle of Energies",
+        "description": "Protects an ally with a magic shield. The ally will gain energy at doubled rate until the shield is destroyed.",
+        "calculation": ""
+      },
+      "Blue": {
+        "name": " Leper",
+        "description": "Jorgen curses everyone on the enemy team, making the furthest enemy the target of the curse. Physical damage taken by heroes on the enemy team will be redirected to the target of the curse for 10 seconds.",
+        "calculation": ""
+      },
+      "Violet": {
+        "name": " Tainted Wounds",
+        "description": "With every attack Jorgen steals some of the affected enemies energy.",
+        "calculation": ""
+      }
+    },
+    "stats": {
+      "intelligence": "",
+      "strength": "",
+      "agility": ""
+    },
+    "image": "https://i.imgur.com/hEbdBEF.png"
+  },
+  "Judge": {
+    "name": "Judge",
+    "stone source": "Arena Shop",
+    "main stat": "Intelligence",
+    "attack type": "Magic Attack",
+    "role": "Mage, Support",
+    "artifacts": {
+      "weapon": "Chart of Endless Stars (Magic Attack)",
+      "book": "Tome of Arcane Knowledge (Magic Attack, Health)",
+      "ring": "Ring of Intelligence"
+    },
+    "glyphs": {
+      "1": "Magic Attack",
+      "2": "Armor",
+      "3": "Health",
+      "4": "Magic Defense",
+      "5": "Intelligence"
+    },
+    "skins": {
+      "1": "Default Skin (Intelligence)",
+      "2": "Mechanical Skin",
+      "3": "Champion's Skin"
+    },
+    "description": "",
+    "skills": {
+      "White": {
+        "name": " Ion Cyclone",
+        "description": "Creates a lightning storm that deals magic damage to every 4 times",
+        "calculation": ""
+      },
+      "Green": {
+        "name": " Force Field",
+        "description": "Casts a shield that absorbs all damage on the ally with the lowest health",
+        "calculation": ""
+      },
+      "Blue": {
+        "name": " Hologram",
+        "description": "Using talent, Judge is cleared of all the negative effects and all blocks the next attack, transforming the damage received into health",
+        "calculation": ""
+      },
+      "Violet": {
+        "name": " Interference Generator",
+        "description": "Passive skill. Lower the enemy team's magical defense",
+        "calculation": ""
+      }
+    },
+    "stats": {
+      "intelligence": "",
+      "strength": "",
+      "agility": ""
+    },
+    "image": "https://i.imgur.com/uOqdiss.png"
+  },
+  "K'arkh": {
+    "name": "K'arkh",
+    "stone source": "Valley of the Titans Merchant",
+    "main stat": "Agility",
+    "attack type": "Physical",
+    "role": "Warrior",
+    "artifacts": {
+      "weapon": "K'arkh's Essence",
+      "book": "Alchemist's Folio",
+      "ring": "Ring of Agility"
+    },
+    "glyphs": {
+      "1": "Physical Attack",
+      "2": "Health",
+      "3": "Armor Penetration",
+      "4": "Armor",
+      "5": "Agility"
+    },
+    "skins": {
+      "1": "Default (Agility)",
+      "2": "Stellar Skin (Armor Penetration)"
+    },
+    "description": "Bolts of lightning shatter the skies of Dagan-Nuhr. Tendrils of darkness lash and strike in a mad dance, flowing in the magnetic storms. The Outland gate is open, and you must pass second through them, following after Brog. K'arkh, one of the four Negators of All Creation, look behind! You see these skies for the last time!",
+    "skills": {
+      "White": {
+        "name": " Nexus of Horror",
+        "description": "K'arkh throws into the air three enemies with the lowest health. When the affected enemies fall back down, they are stunned for 2 seconds.",
+        "calculation": ""
+      },
+      "Green": {
+        "name": " Negator of Laws",
+        "description": "K'arkh opens an interdimensional rift that can block enemy physical attacks for 8 seconds. The hero gets extra energy for each attack blocked.",
+        "calculation": ""
+      },
+      "Blue": {
+        "name": " Deadly Tendrils",
+        "description": "While K'arkh is alive, he strikes every enemy who was thrown into the air. If the enemy level is equal to or less than K'arkh's Level, K'arkh deals double damage.",
+        "calculation": ""
+      },
+      "Violet": {
+        "name": " Survival Factor",
+        "description": "Attacks against enemies thrown into the air heal the hero for a fraction of the damage dealt.",
+        "calculation": ""
+      }
+    },
+    "stats": {
+      "intelligence": "",
+      "strength": "",
+      "agility": ""
+    },
+    "image": "https://i.imgur.com/9ZQmkn7.png"
+  },
+  "Kai": {
+    "name": "Kai",
+    "stone source": "Tower Shop",
+    "main stat": "Intelligence",
+    "attack type": "Magic",
+    "role": "Mage",
+    "artifacts": {
+      "weapon": "Wanderer's Mantle",
+      "book": "Manuscript of the Void",
+      "ring": "Ring of Intelligence"
+    },
+    "glyphs": {
+      "1": "Magic Attack",
+      "2": "Health",
+      "3": "Magic Penetration",
+      "4": "Magic Defense",
+      "5": "Intelligence"
+    },
+    "skins": {
+      "1": "Default (Intelligence)",
+      "2": "Winter Skin (Magic Attack)",
+      "3": "Champion's Skin (Health)",
+      "4": "Solar Skin (Magic Penetration)"
+    },
+    "description": "",
+    "skills": {
+      "White": {
+        "name": " Fetters of the Wind",
+        "description": "Kai launches a tornado that throws targets and deals damage to enemies, Chance depends on level of opponent. Damage depends on Magic Attack.",
+        "calculation": ""
+      },
+      "Green": {
+        "name": " Breath of the Abyss",
+        "description": "Summons a flame pillar, dealing damage to close enemies. Damage depends on Magic Attack.",
+        "calculation": ""
+      },
+      "Blue": {
+        "name": " Explosive Sphere",
+        "description": "Throws a fire sphere, to the next enemy for 3 seconds, then explodes dealing more damage. The sphere and explosion damage both depend on Magic Attack.",
+        "calculation": ""
+      },
+      "Violet": {
+        "name": " Stolen Life",
+        "description": "Passive Skill: Increases Vampirism by 20%.",
+        "calculation": ""
+      }
+    },
+    "stats": {
+      "intelligence": "",
+      "strength": "",
+      "agility": ""
+    },
+    "image": "https://i.imgur.com/GQ8FLPg.png"
+  },
+  "Keira": {
+    "name": "Keira",
+    "stone source": "Campaign",
+    "main stat": "Agility",
+    "attack type": "Physical Attack",
+    "role": "Marksman",
+    "artifacts": {
+      "weapon": "Octaviana's Blades (Physical Attack)",
+      "book": "Alchemist's Folio (Armor Penetration, Physical Attack)",
+      "ring": "Ring of Agility"
+    },
+    "glyphs": {
+      "1": "Physical Attack",
+      "2": "Health",
+      "3": "Armor",
+      "4": "Armor Penetration",
+      "5": "Agility"
+    },
+    "skins": {
+      "1": "Default Skin (Agility)",
+      "2": "Blooming Skin (Physical Attack)",
+      "3": "Winter Skin ( Armor Penetration)",
+      "4": "None"
+    },
+    "description": "Captain Keira was once one of the best Royal Guards who has fallen in battle against Mort Chronos. The demon of war has resurrected the young guard and turned her into a ghost foredoomed to suffer and wander around until the end of time.",
+    "skills": {
+      "White": {
+        "name": " Blade Whirlwind",
+        "description": "Keira launches a whirlwind of blades. The blades reach the furthest enemy and then return, dealing damage to enemies as they fly and silencing them for 4 seconds on the way back. Chance to silence is lowered if the target's level is above your level.",
+        "calculation": ""
+      },
+      "Green": {
+        "name": " Enraged Soul",
+        "description": "Keira's speed increases for 5 seconds.",
+        "calculation": ""
+      },
+      "Blue": {
+        "name": " Dancing Blades",
+        "description": "Passive skill. Keira's basic attack can ricochet between enemies. The chance to ricochet is lowered if the target's level is above your level.",
+        "calculation": ""
+      },
+      "Violet": {
+        "name": " Piercing Pain",
+        "description": "Passive skill. If the enemy's armor is lower than Kiera's armor penetration, she deals extra damage. Extra damage depends on your physical attack.",
+        "calculation": ""
+      }
+    },
+    "stats": {
+      "intelligence": "",
+      "strength": "",
+      "agility": ""
+    },
+    "image": "https://i.imgur.com/iFu9cWH.png"
+  },
+  "Krista": {
+    "name": "Krista",
+    "stone source": "Campaign",
+    "main stat": "Intelligence",
+    "attack type": "Magic",
+    "role": "Mage",
+    "artifacts": {
+      "weapon": "Permafrost Flail",
+      "book": "Tome of Arcane Knowledge",
+      "ring": "Ring of Intelligence"
+    },
+    "glyphs": {
+      "1": "Magic Attack",
+      "2": "Health",
+      "3": "Armor",
+      "4": "Magic Defence",
+      "5": "Intelligence"
+    },
+    "skins": {
+      "1": "Default Skin (Intelligence)",
+      "2": "Masquerade Skin (Magic Attack)",
+      "3": "Devil Skin (Armor)",
+      "4": "Cybernetic Skin (Health)"
+    },
+    "description": "Krista has never known her parents. But her loneliness helped the orphan to better understand her mysterious talent for ice magic. Her life was transformed when she saved a young mage from certain death. The sorceress recognized him as her brother, Lars, who had been separated from her since birth. Krista became his loyal partner.",
+    "skills": {
+      "White": {
+        "name": " Icy Vengeance",
+        "description": "Hits enemies one by one with 6 ice crystals, dealing area damage. Depends on magic attack.",
+        "calculation": ""
+      },
+      "Green": {
+        "name": " Chains of Frost",
+        "description": "Krista hits the enemies in the center of an enemy's team, temporarily reducing their magic defense and applying a Mark of Water to them. Magic defense reduction depends on Magic attack.",
+        "calculation": ""
+      },
+      "Blue": {
+        "name": " Frozen Needles",
+        "description": "Freezes the ground under the feet of an enemy's team, filling the zone with ice thorns. Any movement through the area deals damage to enemies. When the thorns melt, all heroes standing on them get a Mark of Water. Depends on magic attack.",
+        "calculation": ""
+      },
+      "Violet": {
+        "name": " Crystallization",
+        "description": "When in danger of taking major damage, Krista summons an ice block that protects the caster for 2 seconds by partially absorbing any incoming damage.",
+        "calculation": ""
+      }
+    },
+    "stats": {
+      "intelligence": "",
+      "strength": "",
+      "agility": ""
+    },
+    "image": "https://i.imgur.com/LkSTv19.png"
+  },
+  "Lars": {
+    "name": "Lars",
+    "stone source": "Campaign",
+    "main stat": "Intelligence",
+    "attack type": "Magic",
+    "role": "Mage, Control",
+    "artifacts": {
+      "weapon": "Stormy Talisman",
+      "book": "Manuscript of the Void",
+      "ring": "Ring of Intelligence"
+    },
+    "glyphs": {
+      "1": "Magic Attack",
+      "2": "Health",
+      "3": "Magic Defence",
+      "4": "Magic Penetration",
+      "5": "Intelligence"
+    },
+    "skins": {
+      "1": "Default Skin (Intelligence)",
+      "2": "Masquerade Skin (Magic Attack)",
+      "3": "Devil Skin (Magic Penetration)",
+      "4": "Cybernetic Skin (Armor)"
+    },
+    "description": "Lars is a young northern mage. Naturally gifted in elemental magic, he lived prosperously and had the best teachers. Selfish and arrogant, Lars never offered his help for free. Everything changed when his life fell into the hands of his twin sister, who had been separated from Lars since birth.",
+    "skills": {
+      "White": {
+        "name": " Lord of the Storm",
+        "description": "Lars summons a storm at the enemy's backline, dragging heroes to its eye and applying a Mark of Water to each of them.",
+        "calculation": ""
+      },
+      "Green": {
+        "name": " Chain Lightning",
+        "description": "Launches an electrical charge hitting each enemy one by one. Depends on Magic Attack.",
+        "calculation": ""
+      },
+      "Blue": {
+        "name": " Lightning Bolt",
+        "description": "Strikes the nearest enemy with a lightning bolt, dealing damage and stunning them for 4 seconds. Enemies with a Mark of Water are prioritized. Depends on Magic Attack.",
+        "calculation": ""
+      },
+      "Violet": {
+        "name": " Conductance",
+        "description": "All of Lars' attacks against enemies with a Mark of Water deal more damage and stun them for a longer period of time.",
+        "calculation": ""
+      }
+    },
+    "stats": {
+      "intelligence": "",
+      "strength": "",
+      "agility": ""
+    },
+    "image": "https://i.imgur.com/D89N3rG.png"
+  },
+  "Lian": {
+    "name": "Lian",
+    "stone source": "Grand Arena Shop",
+    "main stat": "Intelligence",
+    "attack type": "Magic Attack",
+    "role": "Mage, Control",
+    "artifacts": {
+      "weapon": "Idol of Charm (Magic attack)",
+      "book": "Tome of Arcane Knowledge (Health, Magic attack)",
+      "ring": "Ring of Intelligence"
+    },
+    "glyphs": {
+      "1": "Magic Attack",
+      "2": "Health",
+      "3": "Armor",
+      "4": "Magic Defense",
+      "5": "Intelligence"
+    },
+    "skins": {
+      "1": "Default skin (Intelligence)",
+      "2": "Romantic Skin (Magic Attack)",
+      "3": "Solar Skin (Armor)"
+    },
+    "description": "Following the path of love, the fox turned into a beautiful girl. But her happiness was short-lived, as her beloved fell in a battle. Crushed by grief, but strong in spirit, Lian decided to fight evil with the power of sincere feelings.",
+    "skills": {
+      "White": {
+        "name": " Enchantment",
+        "description": "Charms all enemies, putting them to sleep for 7 seconds. Sleeping enemies wake up immediately when taking damage from anyone other than Lian.",
+        "calculation": ""
+      },
+      "Green": {
+        "name": " Hypnotic Ball",
+        "description": "Fires a magical ball at the nearest enemies, then brings it back, dealing pure damage on the way.",
+        "calculation": ""
+      },
+      "Blue": {
+        "name": " Wandering Lights",
+        "description": "Creates 5 magical spheres and launches them at the nearest enemy, dealing magical damage.",
+        "calculation": ""
+      },
+      "Violet": {
+        "name": " Conciliation",
+        "description": "Passive skill. When Lian is damaged, the enemy who dealt damage is charmed for 4 seconds",
+        "calculation": ""
+      }
+    },
+    "stats": {
+      "intelligence": "",
+      "strength": "",
+      "agility": ""
+    },
+    "image": "https://i.imgur.com/Q2JHKIX.png"
+  },
+  "Lilith": {
+    "name": "Lilith",
+    "stone source": "",
+    "main stat": "",
+    "attack type": "",
+    "role": "",
+    "artifacts": {
+      "weapon": "",
+      "book": "",
+      "ring": ""
+    },
+    "glyphs": {
+      "1": "",
+      "2": "",
+      "3": "",
+      "4": "",
+      "5": ""
+    },
+    "skins": {
+      "1": ""
+    },
+    "description": "",
+    "skills": {
+      "White": {
+        "name": " Armageddon",
+        "description": "Insert Description",
+        "calculation": ""
+      },
+      "Green": {
+        "name": " Nether Breath",
+        "description": "Insert Description",
+        "calculation": ""
+      },
+      "Blue": {
+        "name": " Flame Ram",
+        "description": "Insert Description",
+        "calculation": ""
+      },
+      "Violet": {
+        "name": " Possession",
+        "description": "Insert Description",
+        "calculation": ""
+      }
+    },
+    "stats": {
+      "intelligence": "",
+      "strength": "",
+      "agility": ""
+    },
+    "image": "https://i.imgur.com/1QJb1zg.png"
+  },
+  "Luther": {
+    "name": "Luther",
+    "stone source": "Outland",
+    "main stat": "Strength",
+    "attack type": "Physical Attack",
+    "role": "Tank, Control",
+    "artifacts": {
+      "weapon": "Hammer of Righteous Judgement (Armor)",
+      "book": "Defender's Covenant (Armor, Magic Defense)",
+      "ring": "Ring of Strength"
+    },
+    "glyphs": {
+      "1": "Physical Attack",
+      "2": "Health",
+      "3": "Magic Defense",
+      "4": "Armor",
+      "5": "Strength"
+    },
+    "skins": {
+      "1": "Default Skin (Strength)",
+      "2": "Stellar Skin (Physical attack)",
+      "3": "Angel Skin (Armor)",
+      "4": "Cybernetic Skin (Health)"
+    },
+    "description": "Luther knows no doubt. He is as firm as his faith and directly pursues his goal. Demons have no enemy more hated than this harsh and fearless knight of the Order of St. Bran. He is alone, but only because he doesn't want to put his loved ones in danger. And Luther won't leave his path until he signs the death warrant of each and every demon!",
+    "skills": {
+      "White": {
+        "name": " Omen",
+        "description": "Luther teleports deep into the enemy team, dealing damage to nearby enemies.",
+        "calculation": ""
+      },
+      "Green": {
+        "name": " Sentence",
+        "description": "Stuns nearby enemies and damages them.",
+        "calculation": ""
+      },
+      "Blue": {
+        "name": " Gehenna",
+        "description": "Landing after using Omen, Luther creates a fire wave that deals damage and stuns enemies ahead.",
+        "calculation": ""
+      },
+      "Violet": {
+        "name": " Doctrine of Faith",
+        "description": "A passive skill. Increases magic defense.",
+        "calculation": ""
+      }
+    },
+    "stats": {
+      "intelligence": "",
+      "strength": "",
+      "agility": ""
+    },
+    "image": "https://i.imgur.com/sifnJHD.png"
+  },
+  "Markus": {
+    "name": "Markus",
+    "stone source": "",
+    "main stat": "",
+    "attack type": "",
+    "role": "",
+    "artifacts": {
+      "weapon": "",
+      "book": "",
+      "ring": ""
+    },
+    "glyphs": {
+      "1": "",
+      "2": "",
+      "3": "",
+      "4": "",
+      "5": ""
+    },
+    "skins": {
+      "1": ""
+    },
+    "description": "",
+    "skills": {
+      "White": {
+        "name": " Insert Skill Name",
+        "description": "Insert Description",
+        "calculation": ""
+      },
+      "Green": {
+        "name": " Insert Skill Name",
+        "description": "Insert Description",
+        "calculation": ""
+      },
+      "Blue": {
+        "name": " Insert Skill Name",
+        "description": "Insert Description",
+        "calculation": ""
+      },
+      "Violet": {
+        "name": " Insert Skill Name",
+        "description": "Insert Description",
+        "calculation": ""
+      }
+    },
+    "stats": {
+      "intelligence": "",
+      "strength": "",
+      "agility": ""
+    },
+    "image": "https://i.imgur.com/1IwmQvt.png"
+  },
+  "Martha": {
+    "name": "Martha",
+    "stone source": "Heroic Chest",
+    "main stat": "Intelligence",
+    "attack type": "Physical Attack",
+    "role": "Support, Healer",
+    "artifacts": {
+      "weapon": "Zarakkari Teapot (Armor)",
+      "book": "Tome of Arcane Knowledge (Magic Attack, Health)",
+      "ring": "Intelligence"
+    },
+    "glyphs": {
+      "1": "Magic Attack",
+      "2": "Health",
+      "3": "Magic Defense",
+      "4": "Armor",
+      "5": "Intelligence"
+    },
+    "skins": {
+      "1": "Default Skin (Intelligence)",
+      "2": "Winter Skin (Armor)"
+    },
+    "description": "A special type of tea grows in the woods of Zarakkar. It grants longevity and heals the most dangerous wounds. Guarded by the Foremother, ancient forebear to all tortoises, the marvelous tea had been hidden from human site until a young woman named Martha received its gift, paying an enormous price in return.",
+    "skills": {
+      "White": {
+        "name": " Foremother's Oath",
+        "description": "Increases all allies' speed by x% for 6 seconds.",
+        "calculation": ""
+      },
+      "Green": {
+        "name": " Secret of Longevity",
+        "description": "Martha's basic attacks heal her when a projectile hits an enemy. The farther the projectile travels, the more health it will restore.",
+        "calculation": ""
+      },
+      "Blue": {
+        "name": " Tea Party",
+        "description": "Conjures a totem in front of the character that restores that allies' health. Enemies can't target the totem, but it can take AoE damage.",
+        "calculation": ""
+      },
+      "Violet": {
+        "name": " Healing Brew",
+        "description": "White the totem is active, the ally with the least health now receives additional healing.",
+        "calculation": ""
+      }
+    },
+    "stats": {
+      "intelligence": "",
+      "strength": "",
+      "agility": ""
+    },
+    "image": "https://i.imgur.com/HP5Qyb7.png"
+  },
+  "Maya": {
+    "name": "Maya",
+    "stone source": "Heroic Chest",
+    "main stat": "Intelligence",
+    "attack type": "Magic",
+    "role": "Healer, Mage",
+    "artifacts": {
+      "weapon": "Mother Tree's Branch",
+      "book": "Tome of Arcane Knowledge",
+      "ring": "Ring of Intelligence"
+    },
+    "glyphs": {
+      "1": "Magic Attack",
+      "2": "Health",
+      "3": "Armor",
+      "4": "Magic Defence",
+      "5": "Intelligence"
+    },
+    "skins": {
+      "1": "Default Skin (Intelligence)",
+      "2": "Champion's Skin (Magic Attack)",
+      "3": "Winter Skin (Magic Attack)",
+      "4": "Romantic Skin (Health)"
+    },
+    "description": "Maya is a child born against the laws of nature. Impossible love between a human and a titan fell as tears on the fertile ground, and gave birth to such a beautiful, and yet, powerful creature.",
+    "skills": {
+      "White": {
+        "name": " Queen of Flowers",
+        "description": "A magical flower grows around Maya, protecting her from any attacks. Unless it is destroyed, the flower will restore health of all teammates over time.",
+        "calculation": ""
+      },
+      "Green": {
+        "name": " Poisoned Pollen",
+        "description": "Maya hits the most distant enemy with poisoned pollen that causes damage over time.",
+        "calculation": ""
+      },
+      "Blue": {
+        "name": " Poisonous Bonds",
+        "description": "Living sprouts entangle enemies on the far left and the far right, pulling them to each other and poisoning them.",
+        "calculation": ""
+      },
+      "Violet": {
+        "name": " Queen's Revenge",
+        "description": "Now, when the magical flower dies, its roots entangle the nearest enemies, preventing them from moving and causing damage over time for 8 seconds.",
+        "calculation": ""
+      }
+    },
+    "stats": {
+      "intelligence": "",
+      "strength": "",
+      "agility": ""
+    },
+    "image": "https://i.imgur.com/YO59FXb.png"
+  },
+  "Mojo": {
+    "name": "Mojo",
+    "stone source": "Campaign",
+    "main stat": "Intelligence",
+    "attack type": "Magic Attack",
+    "role": "Mage, Support",
+    "artifacts": {
+      "weapon": "Mask of Anger (Magic Penetration)",
+      "book": "Manuscript of the Void (Magic Penetration, Magic Attack)",
+      "ring": "Ring of Intelligence"
+    },
+    "glyphs": {
+      "1": "Magic Attack",
+      "2": "Magic Defense",
+      "3": "Magic Penetration",
+      "4": "Health",
+      "5": "Intelligence"
+    },
+    "skins": {
+      "1": "Default Skin (Intelligence)",
+      "2": "Winter Skin (Magic Attack)",
+      "3": "Cybernetic Skin (Magic Attack)"
+    },
+    "description": "A dangerous child and a naive sage, a fickle troublemaker and a grumbling kind soul, this is Mojo. Be friendly with him, and he'll be your best friend, but be wary of making him angry! A shaman's curse is a terrible thing.",
+    "skills": {
+      "White": {
+        "name": " Totem of Wrath",
+        "description": "Creates a totem that fires magic charges at the enemy team for 6 seconds. Mojo can attack and use skills for the duration.",
+        "calculation": ""
+      },
+      "Green": {
+        "name": " Healing Spirits",
+        "description": "Heals each ally.",
+        "calculation": ""
+      },
+      "Blue": {
+        "name": " Cursed Bones",
+        "description": "Throws a charge at the nearest enemy, which deals magic damage and stuns the target, then bounces off at a random enemy. (Stun chance lowered if the target's level is above #.)",
+        "calculation": ""
+      },
+      "Violet": {
+        "name": " Hex",
+        "description": "Marks a random target at the start of combat. Every 2 seconds the mark deals magic damage to the taget depending on how much damage the target received during that time.",
+        "calculation": ""
+      }
+    },
+    "stats": {
+      "intelligence": "",
+      "strength": "",
+      "agility": ""
+    },
+    "image": "https://i.imgur.com/cf7zZix.png"
+  },
+  "Nebula": {
+    "name": "Nebula",
+    "stone source": "Valley of the Titans Merchant",
+    "main stat": "Agility",
+    "attack type": "Physical",
+    "role": "Support, Healer",
+    "artifacts": {
+      "weapon": "Unborn Stars",
+      "book": "Book of Illusions",
+      "ring": "Ring of Agility"
+    },
+    "glyphs": {
+      "1": "Physical Attack",
+      "2": "Armor",
+      "3": "Magic Defence",
+      "4": "Health",
+      "5": "Agility"
+    },
+    "skins": {
+      "1": "Default Skin (Agility)",
+      "2": "Romantic Skin (Physical Attack)",
+      "3": "Winter Skin (Physical Attack)[[File:Nebula_%28Winter_Skin%29.jpg"
+    },
+    "description": "Myriads of stars are falling towards their oblivion. Thoughts create new planets and races. Ideas are embodied into matter; they die and reappear, transforming the despair of death into the joy of rebirth. Nebula knows her war will never be over, for it ensures the welfare of the whole Universe.",
+    "skills": {
+      "White": {
+        "name": " Astral Projection",
+        "description": "Nebula launches a slowly flying projectile. Activation deals damage and disperses the energy of enemies in the area of effect. The total damage and the dispersed energy are split between enemies evenly. The projectile can be activated manually, otherwise it is activated when it reaches the furthest enemy. Depends on Physical Attack.",
+        "calculation": ""
+      },
+      "Green": {
+        "name": " Serenity",
+        "description": "Nebula restores the health of two nearby allies and removes negative effects from them. Nebula can benefit from the skill if there is only one ally left. Depends on Physical Attack.",
+        "calculation": ""
+      },
+      "Blue": {
+        "name": " Disharmony",
+        "description": "Deals damage to the enemy with the lowest health. Depends on physical attack.",
+        "calculation": ""
+      },
+      "Violet": {
+        "name": " Equilibrium",
+        "description": "Now Nebula's basic attacks will be switched to support mode. With every activation, Nebula increases the Physical and Magical Attack of one nearby ally by 5 seconds.",
+        "calculation": ""
+      }
+    },
+    "stats": {
+      "intelligence": "",
+      "strength": "",
+      "agility": ""
+    },
+    "image": "https://i.imgur.com/unKfXBa.png"
+  },
+  "Orion": {
+    "name": "Orion",
+    "stone source": "Tower Shop",
+    "main stat": "Intelligence",
+    "attack type": "Magic Attack",
+    "role": "Mage",
+    "artifacts": {
+      "weapon": "DD-901 Arsenal (Magic Penetration)",
+      "book": "Manuscript of the Void (Magic Penetration, Magic Attack)",
+      "ring": "Ring of Intelligence"
+    },
+    "glyphs": {
+      "1": "Magic Attack",
+      "2": "Health",
+      "3": "Magic Penetration",
+      "4": "Magic Defense",
+      "5": "Intelligence"
+    },
+    "skins": {
+      "1": "Default Skin (Intelligence)",
+      "2": "Mechanical Skin (Magic Attack)",
+      "3": "Cybernetic Skin (Magic Defense)"
+    },
+    "description": "",
+    "skills": {
+      "White": {
+        "name": " Total Destruction",
+        "description": "Fires 6 magic missiles at the enemies with the highest health. (45% Magic attack + level • 50)",
+        "calculation": ""
+      },
+      "Green": {
+        "name": " Magnet Field",
+        "description": "Creates an explosion in the back line of the enemy team, dealing damage over an area and slowing the enemies for 4 seconds (slow chance lowered if the target's level is above the ability level) (20% magic attack + 10 • level)",
+        "calculation": ""
+      },
+      "Blue": {
+        "name": " Antimatter Blast",
+        "description": "Fires a magic missile at the nearest enemy, stunning them for 4 seconds and dealing magic damage. (Stun chance lowered if the target's level is above the ability level) (65% magic attack + 45 • level)",
+        "calculation": ""
+      },
+      "Violet": {
+        "name": " Full Charge",
+        "description": "Passive skill: Orion receives additional energy with each attack. (level • 15)",
+        "calculation": ""
+      }
+    },
+    "stats": {
+      "intelligence": "",
+      "strength": "",
+      "agility": ""
+    },
+    "image": "https://i.imgur.com/baI6Q4F.png"
+  },
+  "Peppy": {
+    "name": "Peppy",
+    "stone source": "Campaign",
+    "main stat": "Intelligence",
+    "attack type": "Magic",
+    "role": "Mage, Support",
+    "artifacts": {
+      "weapon": "Ms. Whirligig",
+      "book": "Manuscript of the Void",
+      "ring": "Ring of Intelligence"
+    },
+    "glyphs": {
+      "1": "Magic Attack",
+      "2": "Health",
+      "3": "Magic Penetration",
+      "4": "Magic Defense",
+      "5": "Intelligence"
+    },
+    "skins": {
+      "1": "Default (Intelligence)",
+      "2": "Sweettooth Skin (Magic Attack)",
+      "3": "Champion's Skin (Health)",
+      "4": "Lunar Skin (Magic Penetration)"
+    },
+    "description": "What can you do, if you are small, shy and very cute? What if you really want to do good, but have no energy left to struggle against evil? Young Peppy has found a solution! Her incredible performances bring cause for joy to the honest, common people of the Dominion. They are a serious problem for the greedy and the wicked.",
+    "skills": {
+      "White": {
+        "name": " Masquerade",
+        "description": "Magical damage to all opponents. Stuns, blinds or slows them down for 6 seconds. Depends on Magic Attack.",
+        "calculation": ""
+      },
+      "Green": {
+        "name": " Boldness",
+        "description": "Creates a shield sphere, that protects one ally for 4 seconds. If the shield gets damaged the closes opponent gets damage. Depends on Magic Attack.",
+        "calculation": ""
+      },
+      "Blue": {
+        "name": " Frolic",
+        "description": "A fire beam that stuns and damages opponents for 3 seconds. Damage depends on Magic Attack.",
+        "calculation": ""
+      },
+      "Violet": {
+        "name": " Trickster",
+        "description": "Peppy has the chance to double or quadruple the damage of Frolic (blue)",
+        "calculation": ""
+      }
+    },
+    "stats": {
+      "intelligence": "",
+      "strength": "",
+      "agility": ""
+    },
+    "image": "https://i.imgur.com/GHKWenL.png"
+  },
+  "Phobos": {
+    "name": "Phobos",
+    "stone source": "Campaign",
+    "main stat": "Intelligence",
+    "attack type": "Magic Attack",
+    "role": "Mage, Control",
+    "artifacts": {
+      "weapon": "Raven's Amulet (Magic Defense)",
+      "book": "Tome of Arcane Knowledge (Magic Attack, Health)",
+      "ring": "Ring of Intelligence"
+    },
+    "glyphs": {
+      "1": "Magic Attack",
+      "2": "Armor",
+      "3": "Health",
+      "4": "Magic Defense",
+      "5": "Intelligence"
+    },
+    "skins": {
+      "1": "Default Skin (Intelligence)",
+      "2": "Illusionist Skin (Magic Attack)",
+      "3": "Stellar Skin (Magic Penetration)",
+      "4": "None"
+    },
+    "description": "Sooner or later the mind of every living creature succumbs to the cloying grip of fear. You cannot run, you cannot hide. Fear lives deep within us all. Phobos knows this and awaits his time. If you fear death you will die.",
+    "skills": {
+      "White": {
+        "name": " Paralysis",
+        "description": "Stuns a random enemy for 6.6 seconds and torments their body. The enemy can't use skills or attack during that time.",
+        "calculation": ""
+      },
+      "Green": {
+        "name": " Trembling Hands",
+        "description": "Curses the nearest enemy, reducing their physical attack and dealing damage to them over several seconds.",
+        "calculation": ""
+      },
+      "Blue": {
+        "name": " Dark Deal",
+        "description": "Strikes the nearest enemy with magic damage, heals the ally with the lowest health by an amount equal to the damage dealt.",
+        "calculation": ""
+      },
+      "Violet": {
+        "name": " Mage's Terror",
+        "description": "Modifies the first skill: now it deals more damage and also burns the enemy's energy.",
+        "calculation": ""
+      }
+    },
+    "stats": {
+      "intelligence": "",
+      "strength": "",
+      "agility": ""
+    },
+    "image": "https://i.imgur.com/ImG7GWH.png"
+  },
+  "Qing_Mao": {
+    "name": "Qing Mao",
+    "stone source": "Outland Shop",
+    "main stat": "Agility",
+    "attack type": "Physical Attack",
+    "role": "Warrior",
+    "artifacts": {
+      "weapon": "Spear of the Crimson Dawn (Armor Penetration)",
+      "book": "Book of Illusions (Dodge, Health)",
+      "ring": "Ring of Agility"
+    },
+    "glyphs": {
+      "1": "Physical Attack",
+      "2": "Health",
+      "3": "Armor Penetration",
+      "4": "Dodge",
+      "5": "Agility"
+    },
+    "skins": {
+      "1": "Default Skin (Agility)",
+      "2": "Phoenix Skin (Dodge)",
+      "3": "Spring Skin (Physical Attack)"
+    },
+    "description": "When Qing Long fell, his sister could not put up with her loss. Every night she prayed to the dead gods of the Land of a Thousand Dawns to give her brother back, and so they took pity and bound their souls together. The gods' pity turned out to be a mockery, and in every battle Qing Mao suffers, releasing that which her brother has become.",
+    "skills": {
+      "White": {
+        "name": " Qing Long",
+        "description": "Summons a dragon spirit that hits the nearest enemies three times, burning them for 5 seconds, pushing them back and damaging them.",
+        "calculation": ""
+      },
+      "Green": {
+        "name": " Spear of Dawn",
+        "description": "Blinds the nearest enemies and damages them.",
+        "calculation": ""
+      },
+      "Blue": {
+        "name": " Dragon's Claw",
+        "description": "Deals damage to the nearest enemy based on their current health.",
+        "calculation": ""
+      },
+      "Violet": {
+        "name": " Open Heart",
+        "description": "Qing Mao reduces the target's armor with every attack. The effect lasts until the end of the battle or the target's death.",
+        "calculation": ""
+      }
+    },
+    "stats": {
+      "intelligence": "",
+      "strength": "",
+      "agility": ""
+    },
+    "image": "https://i.imgur.com/fOrgTkr.png"
+  },
+  "Rufus": {
+    "name": "Rufus",
+    "stone source": "Grand Arena",
+    "main stat": "Strength",
+    "attack type": "Magic Attack",
+    "role": "Tank",
+    "artifacts": {
+      "weapon": "Rakashi's Shield",
+      "book": "Tome of Arcane Knowledge",
+      "ring": "Ring of Strength"
+    },
+    "glyphs": {
+      "1": "Magic Attack",
+      "2": "Health",
+      "3": "Magic Defense",
+      "4": "Armor",
+      "5": "Strength"
+    },
+    "skins": {
+      "1": "Default Skin (Strength)",
+      "2": "Barbarian Skin (Magic Attack)",
+      "3": "Angel Skin (Health)"
+    },
+    "description": "Who could've imagined that Rufus, that merry drunkard, would become one of the revered Guardians? He made a bet with Rakashi the demon, put his soul at stake, and chose a reliable method to win, by drinking his opponent down! Rufus won the bet, and the demon, confined within his shield, became his faithful friend and protector.",
+    "skills": {
+      "White": {
+        "name": " Rakashi's Barrier",
+        "description": "Rufus covers the team with a shield which absorbs all magic damage.\nShield Capacity: Absorbs x magic damage, where x depends on Magic Attack.",
+        "calculation": ""
+      },
+      "Green": {
+        "name": " Rakashi's Mockery",
+        "description": "Strikes the enemy with the greatest magic power, dealing damage over time.\nDamage: x for 4 seconds, where x depends on Magic Attack.",
+        "calculation": ""
+      },
+      "Blue": {
+        "name": " Devourer of Magic",
+        "description": "Part of the damage absorbed by Rakashi's Barrier is converted into the hero's health.\nHealth recovered: x%, where x depends on hero level.",
+        "calculation": ""
+      },
+      "Violet": {
+        "name": " Rakashi's Oath",
+        "description": "Rufus can now only be killed with physical damage. If the last attack against the hero dealt magic damage or pure damage, they resurrect with a portion of health restored.\nRecovered Health: x, where x depends on Magic Attack.",
+        "calculation": ""
+      }
+    },
+    "stats": {
+      "intelligence": "",
+      "strength": "",
+      "agility": ""
+    },
+    "image": "https://i.imgur.com/A5X1gSU.png"
+  },
+  "Satori": {
+    "name": "Satori",
+    "stone source": "Heroic Chest",
+    "main stat": "Intelligence",
+    "attack type": "Magic",
+    "role": "Mage",
+    "artifacts": {
+      "weapon": "Black Fox's Fan",
+      "book": "Manuscript of the Void",
+      "ring": "Ring of Intelligence"
+    },
+    "glyphs": {
+      "1": "Magic Attack",
+      "2": "Health",
+      "3": "Armor",
+      "4": "Magic Penetration",
+      "5": "Intelligence"
+    },
+    "skins": {
+      "1": "Default (Intelligence)",
+      "2": "Cybernetic Skin (Armor)"
+    },
+    "description": "The night and the winter forest were the sole witnesses to a wild black fox and a newborn child sleeping, curled against each other for warmth to their final breath. Which of them made the choice, which gave up everything to save another's living soul?",
+    "skills": {
+      "White": {
+        "name": " Ravenous Pack",
+        "description": "The hero's base attacks deal magic damage and apply Fox Fire marks to enemies. When the skill is activated, the enemies take damage for each mark applied to them. Depends on Magic Attack.",
+        "calculation": ""
+      },
+      "Green": {
+        "name": " Spirit Purification",
+        "description": "Satori attacks all enemies, dealing damage and applying a Fox Fire mark. Depends on Magic Attack.",
+        "calculation": ""
+      },
+      "Blue": {
+        "name": " Eternal Wisdom",
+        "description": "Each successful base attack steals intelligence from the enemy and restores the hero's health by 200% of the damage dealt. The intelligence steal is active until the battle ends and can't be cancelled.",
+        "calculation": ""
+      },
+      "Violet": {
+        "name": " Imminent Reckoning",
+        "description": "Satori applies x Fox Fire marks to enemies each time they gain bonus energy. The energy gained from damage dealt to a hero, using a base attack, using a skill, or killing an enemy is not considered bonus energy.",
+        "calculation": ""
+      }
+    },
+    "stats": {
+      "intelligence": "",
+      "strength": "",
+      "agility": ""
+    },
+    "image": "https://i.imgur.com/1UVmhFW.png"
+  },
+  "Sebastian": {
+    "name": "Sebastian",
+    "stone source": "Special Event",
+    "main stat": "Agility",
+    "attack type": "",
+    "role": "Support",
+    "artifacts": {
+      "weapon": "Old Lute (Critical Hit Chance)",
+      "book": "Warrior's Code (Physical Attack, Critical Hit Chance)",
+      "ring": "Ring of Agility"
+    },
+    "glyphs": {
+      "1": "Physical Attack",
+      "2": "Health",
+      "3": "Magic Defense",
+      "4": "Critical Hit Chance",
+      "5": "Agility"
+    },
+    "skins": {
+      "1": "Default Skin (Agility)"
+    },
+    "description": "Fingers strum the strings. A chord, then another! The sounds knock you down like a young beauty’s gaze or an enemy’s pickaxe. The rhythm is the resonant clicking of heels or stray buckshot. The melody is more intoxicating than royal wines, than blood lost by a soldier for the world’s fate. Sebastian is well aware of the great power of art. Music is his weapon!",
+    "skills": {
+      "White": {
+        "name": " Ode of Serenity",
+        "description": "Removes all debuffs from the allied team and conjures a shield that prevents debuffs from being applied 15 times.",
+        "calculation": ""
+      },
+      "Green": {
+        "name": " Battle Song",
+        "description": "Increases the critical hit chance for all allies for 5 seconds, if they have that stat. Heroes that don't have critical hit chance stat, won't be affected by this skill. In case an ally gets a critical hit chance from an artifact when Sebastian uses Battle Song, they will benefit from it.",
+        "calculation": ""
+      },
+      "Blue": {
+        "name": " Striking Solo",
+        "description": "Ally critical hits deal extra pure damage while they're affected by Battle Song.",
+        "calculation": ""
+      },
+      "Violet": {
+        "name": " Public Idol",
+        "description": "Sebastian enters combat with a certain quantity of Energy, which depends on his Physical attack stat.",
+        "calculation": ""
+      }
+    },
+    "stats": {
+      "intelligence": "",
+      "strength": "",
+      "agility": ""
+    },
+    "image": "https://i.imgur.com/LDkatcX.png"
+  },
+  "Thea": {
+    "name": "Thea",
+    "stone source": "Campaign",
+    "main stat": "Intelligence",
+    "attack type": "Magic Attack",
+    "role": "Healer, Support",
+    "artifacts": {
+      "weapon": "Staff of Rebirth (Magic Defense)",
+      "book": "Tome of Arcane Knowledge (Magic Attack, Health)",
+      "ring": "Ring of Intelligence"
+    },
+    "glyphs": {
+      "1": "Magic Attack",
+      "2": "Armor",
+      "3": "Magic Defense",
+      "4": "Health",
+      "5": "Intelligence"
+    },
+    "skins": {
+      "1": "Default Skin (Intelligence)",
+      "2": "Angel Skin (Magic Attack)",
+      "3": "Champion 's Skin (Magic Attack)",
+      "4": "Winter Skin (Armor)"
+    },
+    "description": "Was that the sunrise, or did Thea glance at the battlefield? Wrapping wounded fighters in a wave of warmth, the healer of the Old Grove gifts them with new life.",
+    "skills": {
+      "White": {
+        "name": " Solar Sanctuary",
+        "description": "Heals all Members of the Team. Depends on Magic Attack.",
+        "calculation": ""
+      },
+      "Green": {
+        "name": " Healing Beam",
+        "description": "Heals the ally with the lowest health. Depends on Magic Attack.",
+        "calculation": ""
+      },
+      "Blue": {
+        "name": " Vow of Silence",
+        "description": "Places magical marks above the heads of the enemy, silencing them for 3 seconds. Chance to silence is lowered if the target's level is above your level. Depends on Magic Attack.",
+        "calculation": ""
+      },
+      "Violet": {
+        "name": " Second Wind",
+        "description": "Passively increases the speed of skills for each ally when the ally's health drops below 30%.",
+        "calculation": ""
+      }
+    },
+    "stats": {
+      "intelligence": "",
+      "strength": "",
+      "agility": ""
+    },
+    "image": "https://i.imgur.com/EBvesbO.png"
+  },
+  "Ziri": {
+    "name": "Ziri",
+    "stone source": "",
+    "main stat": "",
+    "attack type": "",
+    "role": "",
+    "artifacts": {
+      "weapon": "",
+      "book": "",
+      "ring": ""
+    },
+    "glyphs": {
+      "1": "",
+      "2": "",
+      "3": "",
+      "4": "",
+      "5": ""
+    },
+    "skins": {
+      "1": ""
+    },
+    "description": "",
+    "skills": {
+      "White": {
+        "name": " Focus of Hatred",
+        "description": "Ziri temporarily increases her armor and magic defence and taunts the enemy team, forcing them to attack her for 8 seconds.",
+        "calculation": ""
+      },
+      "Green": {
+        "name": " Reflection of pain",
+        "description": "Ziri activates an ancient curse. The curse reflects 100% of physical damage received by Ziri back at the attacker for 8 seconds.",
+        "calculation": ""
+      },
+      "Blue": {
+        "name": " Shelter of Sands",
+        "description": "If Ziri's health is below 30% (but only once every 15 seconds), she burrows into the ground for 7 seconds, avoiding enemy attacks and restoring health.",
+        "calculation": ""
+      },
+      "Violet": {
+        "name": " Fury of Akhred Ummi",
+        "description": "Now, when Ziri unburies herself, she stuns and throws back any nearby enemies and uses the second skill.",
+        "calculation": ""
+      }
+    },
+    "stats": {
+      "intelligence": "",
+      "strength": "",
+      "agility": ""
+    },
+    "image": "https://i.imgur.com/x2AyBvT.png"
+  }
+}
