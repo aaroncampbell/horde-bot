@@ -6,7 +6,7 @@ module.exports = {
 	description: 'How energy builds', // Description
 	usage: '[armor/mdef] [pen/mpen]', // Usage to offer to user
 	aliases: ['defense', 'pen', 'penetration', 'mdef', 'mpen'],
-	execute( message, args ) {
+	execute( { message = {}, args = [] } ) {
 		const config = require('../config.json');
 		// Command to execute
 

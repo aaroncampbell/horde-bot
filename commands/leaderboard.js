@@ -6,7 +6,7 @@ module.exports = {
 	description: 'See the leaderboard or set scores for matches', // Description
 	usage: '[date (optional)]', // Usage to offer to user
 	aliases: ['scores'],
-	execute( message, args, rawArgs ) {
+	execute( { message = {}, args = [], rawArgs = '' } ) {
 		const config = require('../config.json');
 		const MongoClient = require('mongodb').MongoClient;
 

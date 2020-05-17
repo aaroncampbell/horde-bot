@@ -5,7 +5,7 @@ module.exports = {
 	name: 'hero-stat-priority', // command name
 	description: 'See what hero stats should be focused on', // Description
 	aliases: ['hero-stats', 'priority'],
-	execute( message, args ) {
+	execute( { message = {} } ) {
 		// Command to execute
 		const prioritiesEmbed = new Discord.MessageEmbed()
 			.setColor( '#9013FE' )

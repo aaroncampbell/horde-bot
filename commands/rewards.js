@@ -197,7 +197,7 @@ module.exports = {
 			.catch( error => console.error( error ) );
 	},
 
-	execute( message, args ) {
+	execute( { message = {}, args = [] } ) {
 		MongoClient.connect( config.dbConnectionUrl, { useUnifiedTopology: true } )
 			.then( client => {
 				const db = client.db( config.dbName );

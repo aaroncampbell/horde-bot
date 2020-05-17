@@ -5,7 +5,7 @@ module.exports = {
 	name: 'crit', // command name
 	description: 'How Critical Hits Work', // Description
 	aliases: [ 'critical', 'crithit', 'criticalhit', 'critchance', 'criticalchance' ],
-	execute( message, args ) {
+	execute( { message = {} } ) {
 		// Command to execute
 
 		const prioritiesEmbed = new Discord.MessageEmbed()

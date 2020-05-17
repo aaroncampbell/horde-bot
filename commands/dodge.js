@@ -4,7 +4,7 @@ const Discord = require( 'discord.js' );
 module.exports = {
 	name: 'dodge', // command name
 	description: 'How Dodge works', // Description
-	execute( message, args ) {
+	execute( { message = {} } ) {
 		// Command to execute
 
 		const prioritiesEmbed = new Discord.MessageEmbed()

@@ -2,7 +2,7 @@ module.exports = {
 	name: 'ping',
 	description: 'Ping!',
 	cooldown: 5,
-	execute( message, args ) {
+	execute( { message = {} } ) {
 		message.channel
 			.send('ping')
 			.then(m =>

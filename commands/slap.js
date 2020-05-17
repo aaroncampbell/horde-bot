@@ -4,7 +4,7 @@ module.exports = {
 	args: true,
 	usage: '<user>',
 	guildOnly: true,
-	execute( message, args ) {
+	execute( { message = {} } ) {
 		const fish = [ 'catfish', 'trout', 'salmon', 'tuna', 'halibut']
 		if ( ! message.mentions.users.size ) {
 			return message.reply( 'you need to tag a user in order to slap them!' );
