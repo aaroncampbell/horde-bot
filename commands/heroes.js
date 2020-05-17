@@ -26,7 +26,11 @@ module.exports = {
 			return message.reply( `Please specify a hero or use \`${config.prefix}${this.name} list\` to see available heroes` );
 		}
 
+		// Fixes hero names by properly capitalizing them - names are capitalized and spaces are replaced with underscores
 		const fixHeroName = function ( heroName ) {
+			// Split on any space, underscore, or hyphen
+			// Uppercase the first letter and lowercase the rest for each part
+			// Combine parts with underscores
 			return heroName.split(/[\s_-]/).map(s => s[0].toUpperCase() + s.substr(1).toLowerCase()).join( '_' );
 		}
 		let heroName, hero;
