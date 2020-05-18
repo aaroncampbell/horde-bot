@@ -1,3 +1,6 @@
+// require the discord.js module
+const Discord = require( 'discord.js' );
+
 const config = require( '../loadConfig.js' );
 
 module.exports = {
@@ -10,13 +13,24 @@ module.exports = {
 		const data = [];
 		const { commands } = message.client;
 
-		if ( ! args.length ) {
-			data.push( 'Here\'s a list of all my commands:' );
-			data.push( commands.map( command => command.name ).join( ', ' ) );
-			data.push( `\nYou can send \`${config.prefix}help [command name]\` to get info on a specific command!` );
+		// Embed to display
+		let helpEmbed = new Discord.MessageEmbed()
+			.setColor('#9013FE');
+
+		if ( ! args.length || 'pin' === args[0] ) {
+			helpEmbed.setTitle( 'List of Available Commands' )
+				.setDescription( commands.map( command => `\`${config.prefix}${command.name}\` - ${command.description}` ).join( '\n' ) + `\n\nYou can send \`${config.prefix}help [command name]\` to get info on a specific command!` );
+
+			if ( 'pin' === args[0] ) {
+				return message.channel.send( helpEmbed )
+					.then( toPin => {
+						toPin.pin();
+						message.delete();
+					} );
+			}
 
 			// Send in DM
-			return message.author.send( data, { split: true } )
+			return message.author.send( helpEmbed )
 				.then( () => {
 					// If the user asked in a regular channel, let them know we answered via DM
 					if ( message.channel.type === 'dm' ) return;
@@ -39,7 +53,15 @@ module.exports = {
 
 		if ( command.aliases ) { data.push( `**Aliases:** ${command.aliases.join(', ')}` ); }
 		if ( command.description ) { data.push( `**Description:** ${command.description}` ); }
-		if ( command.usage ) { data.push( `**Usage:** ${config.prefix}${command.name} ${command.usage}` ); }
+		if ( command.usage ) {
+			let usage = '**Usage:** ';
+			if ( 'function' === typeof command.usage ) {
+				usage += command.usage();
+			} else if ( 'string' === typeof command.usage ) {
+				usage += command.usage;
+			}
+			data.push( usage.replace( /{prefix}/g, config.prefix ) );
+		}
 
 		data.push( `**Cooldown:** ${command.cooldown || 3} second(s)` );
 
