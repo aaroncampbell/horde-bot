@@ -7,9 +7,13 @@ const heroData = require( '../resources/hero-data.json' );
 module.exports = {
 	name: 'hero', // command name
 	description: 'Information about heroes', // Description
-	usage: 'list \\|\\| Hero', // Usage to offer to user
-	guildOnly: true, // If this needs to be in a server channel
 	aliases: ['heroes'],
+	usage() {
+		let help = '\n';
+		help += `\`{prefix}${this.name} list\` - Show a list of all heroes\n`;
+		help += `\`{prefix}${this.name} [hero]\` - Show details for any hero, ex: \`{prefix}${this.name} Galahad\``;
+		return help;
+	},
 	execute( { message = {}, args = [], rawArgs = '', commandName = '' } ) {
 		// If the command used was the plural an no parameters were specified, assume they want a list of all heroes
 		if ( 'heroes' === commandName && !args.length ) {
@@ -71,26 +75,6 @@ module.exports = {
 				.addField( '**Glyphs**', '```' + Object.values( hero.glyphs ).join( '\n' ) + '```' )
 				.addField( '**Skins**', '```' + Object.values( hero.skins ).join( '\n' ) + '```' )
 				.addField( '**Artifacts**', '```' + Object.values( hero.artifacts ).join( '\n' ) + '```' );
-
-
-			/*
-					embed.set_thumbnail(url=hero['image'])
-
-					def format_skill(skill):
-					fstring = f"**{skill[0]}:** {skill[1]['name']}\n" \
-										  f"{skill[1]['description']}\n" \
-										  f"{skill[1]['calculation']}"
-					return fstring
-
-			 */
-			/*
-			const exampleEmbed = new Discord.MessageEmbed()
-		.setTitle('Some title')
-		.attachFiles(['../assets/discordjs.png'])
-		.setImage('attachment://discordjs.png');
-
-	channel.send(exampleEmbed);
-			 */
 
 			return message.channel.send( heroEmbed );
 		} else {
