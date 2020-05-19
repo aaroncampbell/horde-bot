@@ -1,5 +1,6 @@
 // require the discord.js module
 const Discord = require( 'discord.js' );
+const config = require( '../loadConfig.js' );
 
 module.exports = {
 	name: 'livescore', // command name
@@ -11,43 +12,19 @@ module.exports = {
 		// Args are comma separated for this one, fix them
 		args = rawArgs.split( /\s*,\s*/ );
 
-		console.log( message.author );
 		// Embed to display
 		let scoreEmbed = new Discord.MessageEmbed()
 			.setColor( '#9013FE' )
 			.setTitle( ( 'finalscore' === commandName )? '**FINAL SCORE**' : '**LIVE SCORE**' )
 			.setAuthor( message.author.username, message.author.avatarURL() )
 			.addField( args[0], `${args[1]}  ${args[2]} points\n${args[1]}  ${args[3]}/40 atks left\n${args[1]}  ${args[4]} attack losses`, true )
-			.addField( args[5], `${args[6]}  ${args[7]} points\n${args[6]}  ${args[8]}/40 atks left\n${args[6]}  ${args[9]} attack losses`, true );
+			.addField( args[5], `${args[6]}  ${args[7]} points\n${args[6]}  ${args[8]}/40 atks left\n${args[6]}  ${args[9]} attack losses`, true )
+			.setFooter( `Created with the ${config.prefix}${commandName} command` );
 
-		return message.channel.send( scoreEmbed );
-
-		console.log( args );
-		//message.channel.send( args.join( '\n' ) );
-
-		let livescore = {
-			"fields": [{
-				"name": "{args(1):,}",
-				"value": "{args(2):,}  {args(3):,} points\n{args(2):,}  {args(4):,}/40 atks left\n{args(2):,}  {args(5):,} attack losses",
-				"inline": true
-			}, {
-				"name": "{args(6):,}",
-				"value": "{args(7):,} {args(8):,} points\n{args(7):,} {args(9):,}/40 atks left\n{args(7):,} {args(10):,} attack losses",
-				"inline": true
-			}], "title": "LIVE SCORE",
-			"author": {"name": "{user}", "icon_url": "{user(avatar)}"}, "color": 10197915
-		};
-		let finalscore = {
-			"fields": [{
-				"name": "{args(1):,}",
-				"value": "{args(2):,}  {args(3):,} points\n{args(2):,}  {args(4):,}/40 atks left\n{args(2):,}  {args(5):,} attack losses",
-				"inline": true
-			}, {
-				"name": "{args(6):,}",
-				"value": "{args(7):,} {args(8):,} points\n{args(7):,} {args(9):,}/40 atks left\n{args(7):,} {args(10):,} attack losses",
-				"inline": true
-			}], "title": "FINAL SCORE", "author": {"name": "{user}", "icon_url": "{user(avatar)}"}, "color": 8311585
-		};
+		return message.channel.send( scoreEmbed )
+			.then( () => {
+				message.delete();
+			} );
 	},
 };
 /*
