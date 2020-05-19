@@ -35,7 +35,7 @@ module.exports = {
 			// Split on any space, underscore, or hyphen
 			// Uppercase the first letter and lowercase the rest for each part
 			// Combine parts with underscores
-			return heroName.split(/[\s_-]/).map(s => s[0].toUpperCase() + s.substr(1).toLowerCase()).join( '_' );
+			return heroName.split(/[\s_-]/).map(s => s[0].toUpperCase() + s.substr(1).toLowerCase()).join( ' ' );
 		}
 		let heroName, hero;
 
@@ -61,9 +61,12 @@ module.exports = {
 				return skillsStr;
 			}
 
+			let file = new Discord.MessageAttachment( `./resources/images/${heroName.replace( / /g, '-' )}`, 'hero.png' );
+
 			// Embed to display
 			let heroEmbed = new Discord.MessageEmbed()
-				.setThumbnail( hero.image )
+				.attachFiles( [ file ] )
+				.setThumbnail( 'attachment://hero.png' )
 				.setColor( '#9013FE' )
 				.setTitle( `**Hero Data: ${hero.name}**` )
 				.setDescription( hero.description )
