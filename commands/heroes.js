@@ -61,7 +61,10 @@ module.exports = {
 				return skillsStr;
 			}
 
-			let file = new Discord.MessageAttachment( `./resources/images/${heroName.replace( / /g, '-' )}`, 'hero.png' );
+			let file = new Discord.MessageAttachment( `./resources/images/${heroName.replace( / /g, '-' )}.png`, 'hero.png' );
+
+			let maxLabelLen = Math.max( ... ( Object.keys( hero.stats ).map( el => el.length ) ) );
+			let maxStatLen = Math.max( ... ( Object.values( hero.stats ).map( el => el.length ) ) );
 
 			// Embed to display
 			let heroEmbed = new Discord.MessageEmbed()
@@ -75,9 +78,11 @@ module.exports = {
 				.addField( '**Attack Type**', hero['attack type'], true )
 				.addField( '**Role**', hero['role'], true )
 				.addField( '**Skills**', formatSkills( hero.skills ) )
-				.addField( '**Glyphs**', '```' + Object.values( hero.glyphs ).join( '\n' ) + '```' )
+				// .addField( '**Glyphs**', '```' + Object.values( hero.glyphs ).join( '\n' ) + '```' )
+				.addField( '**Stat Priorities**', '```' + Object.values( hero.priorities ).join( '\n' ) + '```' )
 				.addField( '**Skins**', '```' + Object.values( hero.skins ).join( '\n' ) + '```' )
-				.addField( '**Artifacts**', '```' + Object.values( hero.artifacts ).join( '\n' ) + '```' );
+				.addField( '**Artifacts**', '```' + Object.values( hero.artifacts ).join( '\n' ) + '```' )
+				.addField( '**Max Stats**', '```' + Object.keys( hero.stats ).map( k => { return (k+':').padEnd( maxLabelLen + 1 ) + hero.stats[k].padStart( maxStatLen ); } ).join( '\n' ) + '```' );
 
 			return message.channel.send( heroEmbed );
 		} else {
