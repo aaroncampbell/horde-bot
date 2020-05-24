@@ -10,8 +10,8 @@ module.exports = {
 	aliases: ['heroes'],
 	usage() {
 		let help = '\n';
-		help += `\`{prefix}${this.name} list\` - Show a list of all heroes\n`;
-		help += `\`{prefix}${this.name} [hero]\` - Show details for any hero, ex: \`{prefix}${this.name} Galahad\``;
+		help += `\`{prefix}{commandName} list\` - Show a list of all heroes\n`;
+		help += `\`{prefix}{commandName} [hero]\` - Show details for any hero, ex: \`{prefix}{commandName} Galahad\``;
 		return help;
 	},
 	execute( { message = {}, args = [], rawArgs = '', commandName = '' } ) {

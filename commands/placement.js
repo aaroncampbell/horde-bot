@@ -5,7 +5,7 @@ module.exports = {
 	name: 'placement', // command name
 	description: 'Displays hero order by position.', // Description
 	aliases: [ 'heroplacement' ],
-	usage: `{prefix}${this.name}`,
+	usage: `{prefix}{commandName}`,
 	execute( { message = {}, args = [], rawArgs = '', commandName = '' } ) {
 		// Embed to display
 		let mainStatEmbed = new Discord.MessageEmbed()

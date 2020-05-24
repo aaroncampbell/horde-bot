@@ -60,7 +60,7 @@ module.exports = {
 			} else if ( 'string' === typeof command.usage ) {
 				usage += command.usage;
 			}
-			data.push( usage.replace( /{prefix}/g, config.prefix ) );
+			data.push( usage.replace( /{prefix}/g, config.prefix ).replace( /{commandName}/g, command.name ) );
 		}
 
 		data.push( `**Cooldown:** ${command.cooldown || 3} second(s)` );

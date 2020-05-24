@@ -5,7 +5,7 @@ module.exports = {
 	name: 'costs', // command name
 	description: 'Displays the cost of upgrading skins, GoE, and artifacts.', // Description
 	aliases: [ 'herocosts' ],
-	usage: `{prefix}${this.name}`,
+	usage: `{prefix}{commandName}`,
 	execute( { message = {}, args = [], rawArgs = '', commandName = '' } ) {
 		// Embed to display
 		let mainStatEmbed = new Discord.MessageEmbed()

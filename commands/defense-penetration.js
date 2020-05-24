@@ -4,7 +4,7 @@ const Discord = require( 'discord.js' );
 module.exports = {
 	name: 'armor', // command name
 	description: 'How energy builds', // Description
-	usage: '[armor/mdef] [pen/mpen]', // Usage to offer to user
+	usage: '{prefix}{commandName} [armor/mdef] [pen/mpen]', // Usage to offer to user
 	aliases: ['defense', 'pen', 'penetration', 'mdef', 'mpen'],
 	execute( { message = {}, args = [] } ) {
 		const config = require('../config.json');

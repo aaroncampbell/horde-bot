@@ -89,7 +89,14 @@ client.on( 'message', message => {
 
 		// If a usage is specified, offer that to the user
 		if ( command.usage ) {
-			reply += `\nThe proper usage would be: \`${config.prefix}${command.name} ${command.usage}\``;
+			let usage = '\nThe proper usage would be: ';
+			if ( 'function' === typeof command.usage ) {
+				usage += command.usage();
+			} else if ( 'string' === typeof command.usage ) {
+				usage += command.usage;
+			}
+
+			reply += usage.replace( /{prefix}/g, config.prefix ).replace( /{commandName}/g, command.name );
 		}
 		return message.channel.send( reply );
 	}
