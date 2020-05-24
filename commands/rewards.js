@@ -11,35 +11,36 @@ const tzOffsetMinutesToString = function( m ) {
 
 // Use moment-timezone for timezone handling
 let moment = require('moment-timezone');
+
 // Support GMT+-XX format for timezones
-moment.tz.link([
-	'GMT-12|Etc/GMT+12',
-	'GMT-11|Etc/GMT+11',
-	'GMT-10|Etc/GMT+10',
-	'GMT-9|Etc/GMT+9',
-	'GMT-8|Etc/GMT+8',
-	'GMT-7|Etc/GMT+7',
-	'GMT-6|Etc/GMT+6',
-	'GMT-5|Etc/GMT+5',
-	'GMT-4|Etc/GMT+4',
-	'GMT-3|Etc/GMT+3',
-	'GMT-2|Etc/GMT+2',
-	'GMT-1|Etc/GMT+1',
-	'GMT-0|GMT',
-	'GMT+0|GMT',
-	'GMT+1|Etc/GMT-1',
-	'GMT+2|Etc/GMT-2',
-	'GMT+3|Etc/GMT-3',
-	'GMT+4|Etc/GMT-4',
-	'GMT+5|Etc/GMT-5',
-	'GMT+6|Etc/GMT-6',
-	'GMT+7|Etc/GMT-7',
-	'GMT+8|Etc/GMT-8',
-	'GMT+9|Etc/GMT-9',
-	'GMT+10|Etc/GMT-10',
-	'GMT+11|Etc/GMT-11',
-	'GMT+12|Etc/GMT-12'
-]);
+let tzAliases = {
+	'GMT-12': 'Etc/GMT+12',
+	'GMT-11': 'Etc/GMT+11',
+	'GMT-10': 'Etc/GMT+10',
+	'GMT-9':  'Etc/GMT+9',
+	'GMT-8':  'Etc/GMT+8',
+	'GMT-7':  'Etc/GMT+7',
+	'GMT-6':  'Etc/GMT+6',
+	'GMT-5':  'Etc/GMT+5',
+	'GMT-4':  'Etc/GMT+4',
+	'GMT-3':  'Etc/GMT+3',
+	'GMT-2':  'Etc/GMT+2',
+	'GMT-1':  'Etc/GMT+1',
+	'GMT-0':  'GMT',
+	'GMT+0':  'GMT',
+	'GMT+1':  'Etc/GMT-1',
+	'GMT+2':  'Etc/GMT-2',
+	'GMT+3':  'Etc/GMT-3',
+	'GMT+4':  'Etc/GMT-4',
+	'GMT+5':  'Etc/GMT-5',
+	'GMT+6':  'Etc/GMT-6',
+	'GMT+7':  'Etc/GMT-7',
+	'GMT+8':  'Etc/GMT-8',
+	'GMT+9':  'Etc/GMT-9',
+	'GMT+10': 'Etc/GMT-10',
+	'GMT+11': 'Etc/GMT-11',
+	'GMT+12': 'Etc/GMT-12'
+};
 
 module.exports = {
 	name: 'rewards', // command name
@@ -59,6 +60,10 @@ module.exports = {
 					try {
 						const defaultCronTime = '15 0 * * * *';
 						const CronJob = require('cron').CronJob;
+						if ( tzAliases[ config.arenaRewardsSchedule.timezone ] ) {
+							config.arenaRewardsSchedule.timezone = tzAliases[ config.arenaRewardsSchedule.timezone ];
+						}
+
 						if ( ! moment.tz.zone( config.arenaRewardsSchedule.timezone ) ) {
 							config.arenaRewardsSchedule.timezone = null;
 						}
@@ -124,13 +129,13 @@ module.exports = {
 						rewardsEmbed.setTitle(`Reward Times for Server ${server}`);
 					} else if ( !cron && args[0] ) {
 						// If there's an argument that's not set, all, or a server - assume it's a timezone
-
-						if (!moment.tz.zone(args[0])) {
+						let tzName = ( tzAliases[ args[0] ] )? tzAliases[ args[0] ] : args[0];
+						if ( ! moment.tz.zone( tzName ) ) {
 							return message.reply(`I don't recognize the \`${args[0]}\` timezone.\nYou can use this list of tz database time zones to find yours if you don't know it - https://en.wikipedia.org/wiki/List_of_tz_database_time_zones`);
 						}
 
 						// get timezone now that we know it's valid and add it's offset to search
-						search.tzOffset = moment.tz(args[0]).utcOffset();
+						search.tzOffset = moment.tz( tzName ).utcOffset();
 						rewardsEmbed.setTitle(`Reward Times for ${args[0]}`);
 					} else {
 						search.tzOffset = {
@@ -208,6 +213,10 @@ module.exports = {
 					// set requires a timezone as a second arg, return with message if not specified
 					if ( ! args[1] ) {
 						return message.reply( `You must specify a timezone like \`${config.prefix}${this.name} set America/Chicago\`\nYou can use this list of tz database time zones to find yours if you don't know it - https://en.wikipedia.org/wiki/List_of_tz_database_time_zones` );
+					}
+
+					if ( tzAliases[ args[1] ] ) {
+						args[1] = tzAliases[ args[1] ];
 					}
 
 					// Second arg needs to be a valid timezone, return with message if not
