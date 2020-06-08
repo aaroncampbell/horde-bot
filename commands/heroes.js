@@ -11,7 +11,9 @@ module.exports = {
 	usage() {
 		let help = '\n';
 		help += `\`{prefix}{commandName} list\` - Show a list of all heroes\n`;
-		help += `\`{prefix}{commandName} [hero]\` - Show details for any hero, ex: \`{prefix}{commandName} Galahad\``;
+		help += `\`{prefix}{commandName} stats [hero]\` - Show stats for any hero, ex: \`{prefix}{commandName} stats Galahad\`\n`;
+		help += `\`{prefix}{commandName} skills [hero]\` - Show skills for any hero, ex: \`{prefix}{commandName} skills Galahad\`\n`;
+		help += `\`{prefix}{commandName} guide [hero]\` - Show usage guide for any hero, ex: \`{prefix}{commandName} guide Galahad\``;
 		return help;
 	},
 	execute( { message = {}, args = [], rawArgs = '', commandName = '' } ) {
@@ -20,8 +22,15 @@ module.exports = {
 			args = [ 'list' ];
 		}
 
-		// If the request is for a "list" or for "all"
-		if ( [ 'list', 'all' ].includes( args[0].toLowerCase() ) ) {
+		let type = 'stats';
+
+		// If a valid type is the first argument, shift it off and use it.
+		if ( [ 'list', 'skills', 'stats', 'guide' ].includes( args[0].toLowerCase() ) ) {
+			type = args.shift().toLowerCase();
+		}
+
+		// If the request is for a "list"
+		if ( 'list' === type ) {
 			return message.channel.send( Object.keys( heroData ).join( '\n' ) );
 		}
 
@@ -52,13 +61,13 @@ module.exports = {
 
 		if ( heroData[ heroName ] && (hero = heroData[ heroName ]) && 'object' === typeof hero ) {
 			let formatSkills = function( skills ) {
-				let skillsStr = '';
+				let skillsArr = [];
 				for ( let [color, skill] of Object.entries( skills ) ) {
-					skillsStr += `**${color}:** ${skill.name}\n` +
+					skillsArr.push( `**${color}:** ${skill.name}\n` +
 						`${skill.description}\n` +
-						`${skill.calculation}\n`;
+						`${skill.calculation}` );
 				}
-				return skillsStr;
+				return skillsArr;
 			}
 
 			let file = new Discord.MessageAttachment( `./resources/images/${heroName.replace( / /g, '-' )}.png`, 'hero.png' );
@@ -73,16 +82,58 @@ module.exports = {
 				.setColor( '#9013FE' )
 				.setTitle( `**Hero Data: ${hero.name}**` )
 				.setDescription( hero.description )
-				.addField( '**Stone Source**', (hero['stone source'])? hero['stone source'] : '_Missing Data_', true )
-				.addField( '**Main Stat**', (hero['main stat'])? hero['main stat'] : '_Missing Data_', true )
-				.addField( '**Attack Type**', (hero['attack type'])? hero['attack type'] : '_Missing Data_', true )
-				.addField( '**Role**', (hero['role'])? hero['role'] : '_Missing Data_', true )
-				.addField( '**Skills**', formatSkills( hero.skills ) )
-				// .addField( '**Glyphs**', '```' + Object.values( hero.glyphs ).join( '\n' ) + '```' )
-				.addField( '**Stat Priorities**', '```' + Object.values( hero.priorities ).join( '\n' ) + '```' )
-				.addField( '**Skins**', '```' + Object.values( hero.skins ).join( '\n' ) + '```' )
-				.addField( '**Artifacts**', '```' + Object.values( hero.artifacts ).join( '\n' ) + '```' )
-				.addField( '**Max Stats**', '```' + Object.keys( hero.stats ).map( k => { return (k+':').padEnd( maxLabelLen + 1 ) + hero.stats[k].padStart( maxStatLen ); } ).join( '\n' ) + '```' );
+				.addField( '**Stone Source**', (hero['stone source'])? hero['stone source'] : '**Coming Soon**', true )
+				.addField( '**Main Stat**', (hero['main stat'])? hero['main stat'] : '**Coming Soon**', true )
+				.addField( '**Attack Type**', (hero['attack type'])? hero['attack type'] : '**Coming Soon**', true )
+				.addField( '**Role**', (hero['role'])? hero['role'] : '**Coming Soon**', true );
+			if ( 'skills' === type ) {
+				heroEmbed.addField('**Skills**', formatSkills(hero.skills).join('\n\n'));
+			}
+			if ( 'stats' === type ) {
+				heroEmbed.addField( '**Stat Priorities**', '```' + Object.values( hero.priorities ).join( '\n' ) + '```' )
+					.addField('**Glyphs**', '```' + Object.values(hero.glyphs).join('\n') + '```')
+					.addField('**Skins**', '```' + Object.values(hero.skins).join('\n') + '```')
+					.addField('**Artifacts**', '```' + Object.values(hero.artifacts).join('\n') + '```')
+					.addField('**Max Stats**', '```' + Object.keys(hero.stats).map(k => {
+						return (k + ':').padEnd(maxLabelLen + 1) + hero.stats[k].padStart(maxStatLen);
+					}).join('\n') + '```');
+			}
+			if ( 'guide' === type ) {
+				// Require FS
+				const fs = require( 'fs' );
+
+				let usage,teams;
+
+				try {
+					usage = fs.readFileSync(`./resources/info.hero.${heroName.toLowerCase().replace(' ', '')}.usage`, 'utf8');
+				} catch ( error ) {
+					if ( error.code === 'ENOENT' ) {
+						usage = '**Coming Soon**';
+					} else {
+						console.error( error );
+					}
+				}
+				if ( ! usage.trim() ) {
+					usage = '**Coming Soon**';
+				}
+				heroEmbed.setDescription( usage )
+					.addField( '**Stat Priorities**', '```' + Object.values( hero.priorities ).join( '\n' ) + '```' );
+
+				try {
+					teams = fs.readFileSync(`./resources/info.hero.${heroName.toLowerCase().replace(' ', '')}.teams`, 'utf8');
+				} catch ( error ) {
+					if ( error.code === 'ENOENT' ) {
+						teams = '**Coming Soon**';
+					} else {
+						console.error( error );
+					}
+				}
+				if ( ! teams.trim() ) {
+					teams = '**Coming Soon**';
+				}
+				heroEmbed.addField('**Example Teams**', teams )
+				//heroEmbed.addField();
+			}
 
 			return message.channel.send( heroEmbed );
 		} else {
