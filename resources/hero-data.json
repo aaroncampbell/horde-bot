@@ -666,6 +666,69 @@
             "5": "Magic defense"
         }
     },
+    "Corvus": {
+        "name": "Corvus",
+        "stone source": "Special Event",
+        "main stat": "Strength",
+        "attack type": "Physical attack",
+        "role": "Tank",
+        "artifacts": {
+            "weapon": "Undead King's Glaive (Armor)",
+            "book": "Defender's Covenant (Armor, Magic defense)",
+            "ring": "Ring of Strength"
+        },
+        "glyphs": {
+            "1": "Physical attack",
+            "2": "Health",
+            "3": "Armor",
+            "4": "Magic defense",
+            "5": "Strength"
+        },
+        "skins": {
+            "1": "Default Skin (Strength)",
+        },
+        "description": "Not even death could stop Corvus once and for all. Resurrected by his daughter, he swore to protect the Kingdom of Graven and its new Dominion allies from enemies once more. Woe be to those who cross the path of the King of the Undead!",
+        "skills": {
+            "White": {
+                "name": "Strike of the Damned",
+                "description": "Corvus attacks the enemy frontline, dealing damage and temporarily decreasing all defenses (armor, magic defense, dodge). Defense decrease effectiveness and damage death are increased by 10% for each Undead ally on the team.",
+                "calculation": "Damage: 30% Phys atk + ( 100 * skill level ). Defense Decrease: 10% Phys atk + ( 25 * skill level )"
+            },
+            "Green": {
+                "name": "Unity of the Damned",
+                "description": "Corvus increases his Undead allies' physical and magic attack for 10 seconds.",
+                "calculation": "Physical and magic attack bonus: 25% Phys atk + ( 15 * skill level )"
+            },
+            "Blue": {
+                "name": "Alter of Souls",
+                "description": "Corvus conjures an altar behind his team. The altar damages enemies whenever they deal damage to allied heroes. The altar's health decreases when allies take damage.",
+                "calculation": "Altar damage: 2.5% health + 200 + ( 10 * skill level ). Altar health: 130% Health + 8000 + ( 400 * skill level )"
+            },
+            "Violet": {
+                "name": "Royal Defense",
+                "description": "When an ally's health drops below 20%, Corvus moves them to the center of the team. Can be triggered once every 8 seconds.",
+                "calculation": "Chance to move an ally is lowered if the target's level is above 40 + skill level."
+            }
+        },
+        "stats": {
+            "Intelligence": "",
+            "Agility": "",
+            "Strength": "",
+            "Health": "",
+            "Physical attack": "",
+            "Magic attack": "",
+            "Armor": "",
+            "Magic defense": ""
+        },
+        "image": "",
+        "priorities": {
+            "1": "Armor",
+            "2": "Magic Defense",
+            "3": "Health",
+            "4": "Strength",
+            "5": "Physical attack",
+        }
+    },
     "Dante": {
         "name": "Dante",
         "stone source": "Tower Shop",
