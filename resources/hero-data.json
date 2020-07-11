@@ -711,14 +711,14 @@
             }
         },
         "stats": {
-            "Intelligence": "",
-            "Agility": "",
-            "Strength": "",
-            "Health": "",
-            "Physical attack": "",
-            "Magic attack": "",
-            "Armor": "",
-            "Magic defense": ""
+            "Intelligence": "1946",
+            "Agility": "2671",
+            "Strength": "11463",
+            "Health": "558957",
+            "Physical attack": "25857",
+            "Magic attack": "5838",
+            "Armor": "18216",
+            "Magic defense": "14811"
         },
         "image": "",
         "priorities": {
