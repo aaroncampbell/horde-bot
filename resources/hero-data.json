@@ -711,14 +711,14 @@
             }
         },
         "stats": {
-            "Intelligence": "",
-            "Agility": "",
-            "Strength": "",
-            "Health": "",
-            "Physical attack": "",
-            "Magic attack": "",
-            "Armor": "",
-            "Magic defense": ""
+            "Intelligence": "1946",
+            "Agility": "2671",
+            "Strength": "11463",
+            "Health": "558957",
+            "Physical attack": "25857",
+            "Magic attack": "5838",
+            "Armor": "18216",
+            "Magic defense": "14811"
         },
         "image": "",
         "priorities": {
@@ -2585,6 +2585,69 @@
             "5": "Magic defense"
         }
     },
+	"Morrigan": {
+		"name": "Morrigan",
+		"stone source": "Special Event",
+		"main stat": "Intelligence",
+		"attack type": "Magic attack",
+		"role": "Healer, Support",
+		"artifacts": {
+			"weapon": "Raven's Skull (Armor penetration)",
+			"book": "Tome of Arcane Knowledge (Magic attack, Health)",
+			"ring": "Ring of Intelligence"
+		},
+		"glyphs": {
+			"1": "Magic attack",
+			"2": "Health",
+			"3": "Magic defense",
+			"4": "Armor",
+			"5": "Intelligence"
+		},
+		"skins": {
+			"1": "Default Skin (Intelligence)"
+		},
+		"description": "Unable to accept her father's death, Morrigan frantically searched for an opportunity to bring him back to life. The angels warned her the price would be extremely high, but she was willing to pay it. Now that Corvus has been resurrected by dark magic, nothing will drive this family apart ever again.",
+		"skills": {
+			"White": {
+				"name": "Army of Graven",
+				"description": "Morrigan summons 3 Undead skeletons to her side to fight in the front row. She can control up to 6 skeletons at any given time.",
+				"calculation": "Skeleton health: 130% Mag atk + ( 190 * skill level ). Skeleton attack damage: 30% Mag atk + ( 25 * skill level )"
+			},
+			"Green": {
+				"name": "Bone Armor",
+				"description": "Morrigan temporarily boosts Undead allies' defense, increasing their armor and magic defense as well as healing them.",
+				"calculation": "Armor and magic defense bonus: 20% Mag atk + ( 15 * skill level ). Healing: 50% Mag atk + ( 100 * skill level )"
+			},
+			"Blue": {
+				"name": "Moonlight",
+				"description": "Morrigan heals an Undead ally if their health drops below 20%. Can be triggered once every 8 seconds.",
+				"calculation": "Healing: 95% Mag atk + 4000"
+			},
+			"Violet": {
+				"name": "Necromancy",
+				"description": "Increases damage dealt by allied skeletons. Whenever an enemy dies, Morrigan summons their skeleton, even if they attempt to resurrect.",
+				"calculation": "Damage bonus: 15% Mag atk + 1450. Chance to summon a skeleton from a fallen enemy is lowered if the target's level is above 40 + skill level."
+			}
+		},
+		"stats": {
+			"Intelligence": "11714",
+			"Agility": "1946",
+			"Strength": "2671",
+			"Health": "248965",
+			"Physical attack": "15681",
+			"Magic attack": "60555",
+			"Armor": "6361",
+			"Magic defense": "17734"
+		},
+		"image": "",
+		"priorities": {
+			"1": "Armor",
+			"2": "Magic Defense",
+			"3": "Health",
+			"4": "Strength",
+			"5": "Physical attack"
+		}
+	},
     "Nebula": {
         "name": "Nebula",
         "stone source": "Valley of the Titans Merchant",
