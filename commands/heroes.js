@@ -90,11 +90,11 @@ module.exports = {
 				heroEmbed.addField('**Skills**', formatSkills(hero.skills).join('\n\n'));
 			}
 			if ( 'stats' === type ) {
-				heroEmbed.addField( '**Stat Priorities**', '```' + Object.values( hero.priorities ).join( '\n' ) + '```' )
-					.addField('**Glyphs**', '```' + Object.values(hero.glyphs).join('\n') + '```')
-					.addField('**Skins**', '```' + Object.values(hero.skins).join('\n') + '```')
-					.addField('**Artifacts**', '```' + Object.values(hero.artifacts).join('\n') + '```')
-					.addField('**Max Stats**', '```' + Object.keys(hero.stats).map(k => {
+				heroEmbed.addField( '**Stat Priorities**', '```\n' + Object.values( hero.priorities ).join( '\n' ) + '```' )
+					.addField('**Glyphs**', '```\n' + Object.values(hero.glyphs).join('\n') + '```')
+					.addField('**Skins**', '```\n' + Object.values(hero.skins).join('\n') + '```')
+					.addField('**Artifacts**', '```\n' + Object.values(hero.artifacts).join('\n') + '```')
+					.addField('**Max Stats**', '```\n' + Object.keys(hero.stats).map(k => {
 						return (k + ':').padEnd(maxLabelLen + 1) + hero.stats[k].padStart(maxStatLen);
 					}).join('\n') + '```');
 			}
@@ -117,7 +117,7 @@ module.exports = {
 					usage = '**Coming Soon**';
 				}
 				heroEmbed.setDescription( usage )
-					.addField( '**Stat Priorities**', '```' + Object.values( hero.priorities ).join( '\n' ) + '```' );
+					.addField( '**Stat Priorities**', '```\n' + Object.values( hero.priorities ).join( '\n' ) + '```' );
 
 				try {
 					teams = fs.readFileSync(`./resources/info.hero.${heroName.toLowerCase().replace(' ', '')}.teams`, 'utf8');
