@@ -2410,7 +2410,8 @@
         },
         "skins": {
             "1": "Default Skin (Intelligence)",
-            "2": "Winter Skin (Armor)"
+            "2": "Winter Skin (Armor)",
+            "3": "Solar Skin (Magic defense)"
         },
         "description": "A special type of tea grows in the woods of Zarakkar. It grants longevity and heals the most dangerous wounds. Guarded by the Foremother, ancient forebear to all tortoises, the marvelous tea had been hidden from human site until a young woman named Martha received its gift, paying an enormous price in return.",
         "skills": {
@@ -2443,7 +2444,7 @@
             "Physical attack": "13439",
             "Magic attack": "67804",
             "Armor": "5405",
-            "Magic defense": "15846"
+            "Magic defense": "26496"
         },
         "image": "https://i.imgur.com/HP5Qyb7.png",
         "priorities": {
