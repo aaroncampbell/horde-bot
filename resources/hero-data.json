@@ -1086,7 +1086,8 @@
         "skins": {
             "1": "Default Skin (Intelligence)",
             "2": "Stellar Skin (Magic attack)",
-            "3": "Masquerade Skin (Health)"
+            "3": "Masquerade Skin (Health)",
+            "4": "Solar Skin (Magic defense)"
         },
         "description": "Faceless, the best apprentice at the School of Mystics, was never especially favored by his mentors. A silent type who had a unique talent, he scared people around him. Nobody knows what's hiding behind his dark mask...",
         "skills": {
@@ -1119,7 +1120,7 @@
             "Physical attack": "19740",
             "Magic attack": "63439",
             "Armor": "2296",
-            "Magic defense": "14282",
+            "Magic defense": "24932",
             "Magic penetration": "16440"
         },
         "image": "https://i.imgur.com/qJ3mflF.png",
