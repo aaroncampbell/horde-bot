@@ -3243,6 +3243,71 @@
             "5": "Magic defense"
         }
     },
+    "Yasmine": {
+        "name": "Yasmine",
+        "stone source": "Special Event",
+        "main stat": "Agility",
+        "attack type": "Physical",
+        "role": "Warrior",
+        "artifacts": {
+            "weapon": "Concubine's Khanjars (Physical attack)",
+            "book": "Warrior's Code (Critical Hit, Physical attack)",
+            "ring": "Ring of Agility"
+        },
+        "glyphs": {
+            "1": "Physical attack",
+            "2": "Health",
+            "3": "Critical hit",
+            "4": "Dodge",
+            "5": "Agility"
+        },
+        "skins": {
+            "1": "Default Skin (Agility)"
+        },
+        "description": "Years spent in slavery made her forget how to love, replacing the sweet feelings with bitterness and defiance. Her master's favorite dancer and most dangerous weapon, that's who Yasmine was. Now that the young woman has escaped, her wounded soul is crying out for vengeance!",
+        "skills": {
+            "White": {
+                "name": "Dance of Death",
+                "description": "Yasmine paralyzes the enemy with the lowest armor for 3.0 seconds, leaps to strike them from behind 7 times, and applies an Assassin's Mark. While Dance of Death is active, Yasmine is immune to debuffs. When it ends, she continues attacking the marked enemy with basic attacks.",
+                "calculation": "One-hit damage: 60% Physical attack + 2400"
+            },
+            "Green": {
+                "name": "Assassin's Instinct",
+                "description": "When Dance of Death is activated, Yasmine's critical hit chance and Dodge are increased for 10 seconds.",
+                "calculation": "Extra critical hit chance and Dodge: 45% Physical attack + 1200"
+            },
+            "Blue": {
+                "name": "Embrace of Pain",
+                "description": "Yasmine's critical hits poison the enemy. When poison is reapplied to a poisoned enemy, the duration of the poison debuff is refreshed, and the damage stacks up to 10 times.",
+                "calculation": "One poison debuff deals 25% Physical attack + 960 pure damage per 5.0 seconds."
+            },
+            "Violet": {
+                "name": "Unknown Toxin",
+                "description": "Blocks a portion of healing received by enemies poisoned by Yasmine.",
+                "calculation": "25% Physical attack + 2650 points of healing are blocked per heal."
+            }
+        },
+        "stats": {
+            "Intelligence": "2224",
+            "Agility": "11254",
+            "Strength": "2411",
+            "Health": "168195",
+            "Physical attack": "43859",
+            "Magic attack": "6672",
+            "Armor": "11939",
+            "Magic defense": "4479",
+            "Dodge": "2416",
+            "Crit hit chance": "5701"
+        },
+        "image": "",
+        "priorities": {
+            "1": "Physical attack",
+            "2": "Crit Hit",
+            "3": "Strength",
+            "4": "Health",
+            "5": "Dodge"
+        }
+    },
     "Ziri": {
         "name": "Ziri",
         "stone source": "Guild War Shop",
