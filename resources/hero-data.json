@@ -3134,7 +3134,8 @@
         },
         "skins": {
             "1": "Default Skin (Agility)",
-            "2": "Romantic Skin (Crit Hit Chance)"
+            "2": "Romantic Skin (Crit Hit Chance)",
+            "3": "Devil Skin (Magic defense)"
         },
         "description": "Fingers strum the strings. A chord, then another! The sounds knock you down like a young beauty\u2019s gaze or an enemy\u2019s pickaxe. The rhythm is the resonant clicking of heels or stray buckshot. The melody is more intoxicating than royal wines, than blood lost by a soldier for the world\u2019s fate. Sebastian is well aware of the great power of art. Music is his weapon!",
         "skills": {
@@ -3167,7 +3168,7 @@
             "Physical attack": "46405",
             "Magic attack": "7122",
             "Armor": "11364",
-            "Magic defense": "8621",
+            "Magic defense": "19271",
             "Crit hit chance": "8435"
         },
         "image": "https://i.imgur.com/LDkatcX.png",
