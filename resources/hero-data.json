@@ -2539,7 +2539,8 @@
             "5": "Intelligence"
         },
         "skins": {
-            "1": "Default Skin (Intelligence)"
+            "1": "Default Skin (Intelligence)",
+            "2": "Devil Skin (Health)"
         },
         "description": "Unable to accept her father's death Morrigan frantically searched for an opportunity to bring him back to life. The angels warned her the price would bee extremely high, but she was willing to pay it. Now that Corvus has been resurrected by dark magic nothing will drive this family apart ever again.",
         "skills": {
@@ -2568,7 +2569,7 @@
             "Intelligence": "11714",
             "Agility": "1946",
             "Strength": "2671",
-            "Health": "248965",
+            "Health": "355610",
             "Physical attack": "15681",
             "Magic attack": "60555",
             "Armor": "6361",
