@@ -750,7 +750,8 @@
         },
         "skins": {
             "1": "Default Skin (Agility)",
-            "2": "Romantic Skin (Dodge)"
+            "2": "Romantic Skin (Dodge)",
+            "3": "Solar Skin (Physical Attack)"
         },
         "description": "Everything has its price, even the human soul. But our hero loves a bargain: he'll gladly take it for free. Don't worry, Dante will take  care  of your  soul as if  it was  his own!",
         "skills": {
@@ -780,11 +781,11 @@
             "Agility": "10279",
             "Strength": "2613",
             "Health": "259740",
-            "Physical attack": "39714",
+            "Physical attack": "46809",
             "Magic attack": "7854",
             "Armor": "15564",
-            "Magic defense": "9010",
-            "Dodge": "6857"
+            "Magic defense": "5650",
+            "Dodge": "7977"
         },
         "image": "https://i.imgur.com/f1TUNw1.png",
         "priorities": {
