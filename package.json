@@ -27,9 +27,9 @@
 	"license": "GPL-2.0-or-later",
 	"dependencies": {
 		"cron": "^1.8.2",
-		"discord.js": "^12.3.1",
+		"discord.js": "^12.4.1",
 		"moment-timezone": "^0.5.31",
-		"mongodb": "^3.6.1"
+		"mongodb": "^3.6.2"
 	},
 	"repository": {
 		"type": "git",
