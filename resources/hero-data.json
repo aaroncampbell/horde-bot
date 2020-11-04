@@ -685,7 +685,8 @@
             "5": "Strength"
         },
         "skins": {
-            "1": "Default Skin (Strength)"
+            "1": "Default Skin (Strength)",
+            "2": "Devil Skin (Physical attack)"
         },
         "description": "Not even death could stop Corvus once and for all. Resurrected by his daughter, he swore to protect the Kingdom of Graven and its new Dominion allies from enemies once more. Woe be to those who cross the path of the King of the Undead!",
         "skills": {
@@ -715,7 +716,7 @@
             "Agility": "2671",
             "Strength": "11463",
             "Health": "558957",
-            "Physical attack": "25857",
+            "Physical attack": "32952",
             "Magic attack": "5838",
             "Armor": "18216",
             "Magic defense": "14811"
