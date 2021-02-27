@@ -1155,7 +1155,8 @@
         "skins": {
             "1": "Default Skin (Agility)",
             "2": "Winter Skin (Physical attack)",
-            "3": "Spring Skin (Health)"
+            "3": "Spring Skin (Health)",
+            "4": "Lunar Skin (Armor penetration)"
         },
         "description": "Nobody has ever seen an expression of anger or doubt on this cute face. On the contrary, Fox is like a bright light in the darkness, filling her allies' hearts with joy and courage. Once she grabs her gun, the enemy has no chance.",
         "skills": {
@@ -1189,7 +1190,7 @@
             "Magic attack": "6816",
             "Armor": "15437",
             "Magic defense": "4332",
-            "Armor penetration": "17410",
+            "Armor penetration": "28060",
             "Crit hit chance": "2866"
         },
         "image": "https://i.imgur.com/AFQF03X.png",
