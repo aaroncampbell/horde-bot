@@ -422,7 +422,8 @@
         "skins": {
             "1": "Default Skin (Intelligence)",
             "2": "Winter Skin (Magic attack)",
-            "3": "Spring Skin (Magic defense)"
+            "3": "Spring Skin (Magic defense)",
+            "4": "Romantic Skin (Armor)"
         },
         "description": "Just like day flows into night, Celeste changes her form. Gleaming sunlight grants life while the shadow of night opens up her darker traits. Nobody knows if she can keep that delicate balance under control for much longer...",
         "skills": {
@@ -454,7 +455,7 @@
             "Health": "176407",
             "Physical attack": "15656",
             "Magic attack": "66960",
-            "Armor": "2523",
+            "Armor": "13173",
             "Magic defense": "27235",
             "Magic penetration": "17510"
         },
