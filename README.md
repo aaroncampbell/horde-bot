@@ -4,6 +4,10 @@ The Horde's Hero Wars Discord Bot
 
 # TODO
 ## Most important
+* Ability to add other people's reward times
+* Name lookup for reward times to avoid the `invalid_user` issue
+* Ability to remove people from award times
+* Ability to look up a hero's specific stat priority - `!hero-stat-priority andvari`
 * Better help, especially for more complex commands
 * Documentation on how to set up a discord app/bot and add it to your server
 * User friendly way for adding scores.
