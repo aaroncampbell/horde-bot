@@ -1554,7 +1554,8 @@
         "skins": {
             "1": "Default Skin (Intellience)",
             "2": "Barbarian Skin (Magic attack)",
-            "3": "Lunar Skin (Health)"
+            "3": "Lunar Skin (Health)",
+            "4": "Romantic Skin (Dodge)"
         },
         "description": "You should not underestimate Jet, the insect exterminator from Tornville! Fascinated by his craft and science, he would spend all of his time in the laboratory. A simple goblin who found a way not only to poison other creatures, but also to heal them and evolve their skills, he quickly caught the attention of the Guardians.",
         "skills": {
@@ -1588,7 +1589,7 @@
             "Magic attack": "59640",
             "Armor": "2807",
             "Magic defense": "17415",
-            "Dodge": "5366"
+            "Dodge": "8331"
         },
         "image": "https://i.imgur.com/rF6SPOC.png",
         "priorities": {
