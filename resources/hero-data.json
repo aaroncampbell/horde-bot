@@ -19,7 +19,8 @@
         },
         "skins": {
             "1": "Default Skin (Strength)",
-            "2": "Winter Skin (Physical attack)"
+            "2": "Winter Skin (Physical attack)",
+            "3": "Lunar Skin (Magic Defense)"
         },
         "description": "Andvari doesn't like it when others call him a legend. He believes the Titan Artifacts he created are merely a necessity in the war against evil. However, his talent, honesty, and eagerness to work make it obvious that the element of Earth made the right choice!",
         "skills": {
@@ -52,7 +53,7 @@
             "Physical attack": "34998",
             "Magic attack": "6429",
             "Armor": "12078",
-            "Magic defense": "2143",
+            "Magic defense": "12793",
             "Armor penetration": "16500"
         },
         "image": "https://i.imgur.com/i1lglgo.png",
