@@ -1357,7 +1357,8 @@
         "skins": {
             "1": "Default Skin (Intelligence)",
             "2": "Winter Skin (Dodge)",
-            "3": "Lunar Skin (Magic attack)"
+            "3": "Lunar Skin (Magic attack)",
+            "4": "Devil Skin (Health)"
         },
         "description": "Enchanted by Heidi's looks? You're dead. You've kept your head on a swivel, sleept with both eyes open? No use! An experienced ranger tracks their prey with ease, and the meeting won't be pretty!",
         "skills": {
@@ -1386,7 +1387,7 @@
             "Intelligence": "11608",
             "Agility": "2434",
             "Strength": "2434",
-            "Health": "172374",
+            "Health": "279019",
             "Physical attack": "16559",
             "Magic attack": "59451",
             "Armor": "7209",
