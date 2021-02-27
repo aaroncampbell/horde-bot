@@ -2743,7 +2743,8 @@
         "skins": {
             "1": "Default Skin (Intelligence)",
             "2": "Mechanical Skin (Magic attack)",
-            "3": "Cybernetic Skin (Magic defense)"
+            "3": "Cybernetic Skin (Magic defense)",
+            "4": "Romantic Skin (Armor)"
         },
         "description": "He is the real mystery of the world of the Dominion. Nobody knows which galaxy he came from or what he is doing in these lands. Some people see him as great danger, a messenger from hell, others praise him as their saviour. But what are the true motives of this great warrior from a distant planet?",
         "skills": {
@@ -2775,7 +2776,7 @@
             "Health": "175548",
             "Physical attack": "15677",
             "Magic attack": "66340",
-            "Armor": "3047",
+            "Armor": "13697",
             "Magic defense": "27450",
             "Magic penetration": "16580"
         },
