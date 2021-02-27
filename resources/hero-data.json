@@ -747,42 +747,43 @@
             "1": "Physical attack",
             "2": "Armor",
             "3": "Health",
-            "4": "Magic defense",
+            "4": "Dodge",
             "5": "Agility"
         },
         "skins": {
             "1": "Default Skin (Agility)",
             "2": "Romantic Skin (Dodge)",
-            "3": "Solar Skin (Physical Attack)"
+            "3": "Solar Skin (Physical Attack)",
+            "4": "Winter Skin (Health)"
         },
         "description": "Everything has its price, even the human soul. But our hero loves a bargain: he'll gladly take it for free. Don't worry, Dante will take  care  of your  soul as if  it was  his own!",
         "skills": {
             "White": {
                 "name": "Instrument of Fate",
-                "description": "Throws a ghost spear passing through the enemies. Deals decreasing damage on each successive enemy it hits",
-                "calculation": ""
+                "description": "Dante throws 4 spectral spears at multiple enemies, dealing physical damage and pushing the targets back.",
+                "calculation": "Damage: 95% Physical attack + ???"
             },
             "Green": {
-                "name": "Haze",
-                "description": "Creates a shield that blocks all damage and negative effects for 2,5 seconds",
-                "calculation": ""
+                "name": "Foresight",
+                "description": "Increases all allies' Dodge for 7.0 seconds.",
+                "calculation": "Bonus Dodge: 10% Physical attack + ???"
             },
             "Blue": {
-                "name": "Spiritual Bond",
-                "description": "Binds Dante to a random ally and increases their speed for 4 seconds",
-                "calculation": ""
+                "name": "Retribution",
+                "description": "When Dante or an ally dodges damage, Dante conjures a spectral spear and throws it at the nearest enemy. The spear deals physical damage and pushes its target back.",
+                "calculation": "Damage: 90% Physical attack + ???"
             },
             "Violet": {
-                "name": "Phantom Pain",
-                "description": "Passive skill: Improves Agility for all Heros",
-                "calculation": ""
+                "name": "Shackles of Weakness",
+                "description": "When a spectral spear from Instrument of Fate or Retribution hits and enemy, Dante decreases the target's main stat for 7.0 seconds.",
+                "calculation": "Intelligence, Agility, or Strength decrease: 6% Physical attack + ???"
             }
         },
         "stats": {
             "Intelligence": "2618",
             "Agility": "10279",
             "Strength": "2613",
-            "Health": "259740",
+            "Health": "366385",
             "Physical attack": "46809",
             "Magic attack": "7854",
             "Armor": "15564",
