@@ -2610,7 +2610,8 @@
         "skins": {
             "1": "Default Skin (Intelligence)",
             "2": "Winter Skin (Magic attack)",
-            "3": "Cybernetic Skin (Magic attack)"
+            "3": "Cybernetic Skin (Magic attack)",
+            "4": "Lunar Skin (Health)"
         },
         "description": "A dangerous child and a naive sage, a fickle troublemaker and a grumbling kind soul, this is Mojo. Be friendly with him, and he'll be your best friend, but be wary of making him angry! A shaman's curse is a terrible thing.",
         "skills": {
@@ -2639,7 +2640,7 @@
             "Intelligence": "10998",
             "Agility": "2327",
             "Strength": "2452",
-            "Health": "178333",
+            "Health": "284978",
             "Physical attack": "15702",
             "Magic attack": "74860",
             "Armor": "2327",
