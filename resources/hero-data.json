@@ -3276,7 +3276,8 @@
             "5": "Agility"
         },
         "skins": {
-            "1": "Default Skin (Agility)"
+            "1": "Default Skin (Agility)",
+            "2": "Devil Skin (Critical hit)"
         },
         "description": "Years spent in slavery made her forget how to love, replacing the sweet feelings with bitterness and defiance. Her master's favorite dancer and most dangerous weapon, that's who Yasmine was. Now that the young woman has escaped, her wounded soul is crying out for vengeance!",
         "skills": {
@@ -3311,7 +3312,7 @@
             "Armor": "11939",
             "Magic defense": "4479",
             "Dodge": "2416",
-            "Crit hit chance": "5701"
+            "Crit hit chance": "8661"
         },
         "image": "",
         "priorities": {
