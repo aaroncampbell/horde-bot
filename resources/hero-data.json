@@ -2155,7 +2155,8 @@
         "skins": {
             "1": "Default skin (Intelligence)",
             "2": "Romantic Skin (Magic attack)",
-            "3": "Solar Skin (Armor)"
+            "3": "Solar Skin (Armor)",
+            "4": "Devil Skin (Magic defense)"
         },
         "description": "Following the path of love, the fox turned into a beautiful girl. But her happiness was short-lived, as her beloved fell in a battle. Crushed by grief, but strong in spirit, Lian decided to fight evil with the power of sincere feelings.",
         "skills": {
@@ -2188,7 +2189,7 @@
             "Physical attack": "15586",
             "Magic attack": "70653",
             "Armor": "17839",
-            "Magic defense": "19694"
+            "Magic defense": "30344"
         },
         "image": "https://i.imgur.com/Q2JHKIX.png",
         "priorities": {
