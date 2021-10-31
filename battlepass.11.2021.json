@@ -1,0 +1,552 @@
+{
+	"1": [
+		{
+			"quest":  "Upgrade the Gift of the Elements to level 1",
+			"repeat": "10",
+			"exp":    "160"
+		},
+		{
+			"quest":  "Begin 1 Expedition",
+			"repeat": "7",
+			"exp":    "140"
+		},
+		{
+			"quest":  "Complete 1 heroic mission",
+			"repeat": "12",
+			"exp":    "165"
+		},
+		{
+			"quest":  "Strike down the highwayman",
+			"repeat": "5",
+			"exp":    "80"
+		}
+	],
+	"2": [
+		{
+			"quest":  "Use 1 Energy",
+			"repeat": "600",
+			"exp":    "1"
+		},
+		{
+			"quest":  "Open 1 chest in Outlands",
+			"repeat": "8",
+			"exp":    "120"
+		},
+		{
+			"quest":  "Get 1 Soul Stone of any hero",
+			"repeat": "90",
+			"exp":    "30"
+		},
+		{
+			"quest":  "Collect 1 Titanite in the Guild Dungeon",
+			"repeat": "170",
+			"exp":    "5"
+		}
+	],
+	"3": [
+		{
+			"quest":  "Open 1 heroic chest",
+			"repeat": "3",
+			"exp":    "300"
+		},
+		{
+			"quest":  "Complete 1 mission",
+			"repeat": "20",
+			"exp":    "100"
+		},
+		{
+			"quest":  "Fight 1 time in the Arena",
+			"repeat": "8",
+			"exp":    "200"
+		},
+		{
+			"quest":  "Open 1 Artifact Chest",
+			"repeat": "15",
+			"exp":    "160"
+		}
+	],
+	"4": [
+		{
+			"quest":  "Begin 1 Expedition",
+			"repeat": "7",
+			"exp":    "140"
+		},
+		{
+			"quest":  "Win 1 battle in Outland",
+			"repeat": "8",
+			"exp":    "200"
+		},
+		{
+			"quest":  "Use 1 Energy",
+			"repeat": "600",
+			"exp":    "1"
+		},
+		{
+			"quest":  "Use EXP potion: 1",
+			"repeat": "60",
+			"exp":    "20"
+		}
+	],
+	"5": [
+		{
+			"quest":  "Complete 1 mission",
+			"repeat": "20",
+			"exp":    "100"
+		},
+		{
+			"quest":  "Open 1 heroic chest",
+			"repeat": "3",
+			"exp":    "300"
+		},
+		{
+			"quest":  "Collect 1 Titanite in the Guild Dungeon",
+			"repeat": "170",
+			"exp":    "5"
+		},
+		{
+			"quest":  "Open 1 chest in Outlands",
+			"repeat": "8",
+			"exp":    "120"
+		}
+	],
+	"6": [
+		{
+			"quest":  "Use 1 Energy",
+			"repeat": "600",
+			"exp":    "1"
+		},
+		{
+			"quest":  "Open 1 chest in the Tower",
+			"repeat": "25",
+			"exp":    "140"
+		},
+		{
+			"quest":  "Strike down the highwayman",
+			"repeat": "5",
+			"exp":    "80"
+		},
+		{
+			"quest":  "Battle any Hydra 1 time",
+			"repeat": "3",
+			"exp":    "240"
+		}
+	],
+	"7": [
+		{
+			"quest":  "Complete 1 heroic mission",
+			"repeat": "12",
+			"exp":    "165"
+		},
+		{
+			"quest":  "Open 1 Artifact Chest",
+			"repeat": "15",
+			"exp":    "160"
+		},
+		{
+			"quest":  "Use EXP potion: 1",
+			"repeat": "60",
+			"exp":    "20"
+		},
+		{
+			"quest":  "Open 1 chest in Outlands",
+			"repeat": "8",
+			"exp":    "120"
+		}
+	],
+	"8": [
+		{
+			"quest":  "Use 1 Energy",
+			"repeat": "600",
+			"exp":    "1"
+		},
+		{
+			"quest":  "Upgrade the Gift of the Elements to level 1",
+			"repeat": "10",
+			"exp":    "160"
+		},
+		{
+			"quest":  "Fight 1 time in the Arena",
+			"repeat": "8",
+			"exp":    "200"
+		},
+		{
+			"quest":  "Battle any Hydra 1 time",
+			"repeat": "3",
+			"exp":    "240"
+		}
+	],
+	"9": [
+		{
+			"quest":  "Fight 1 time in the Grand Arena",
+			"repeat": "7",
+			"exp":    "140"
+		},
+		{
+			"quest":  "Collect 1 Titanite in the Guild Dungeon",
+			"repeat": "170",
+			"exp":    "5"
+		},
+		{
+			"quest":  "Strike down the highwayman",
+			"repeat": "5",
+			"exp":    "80"
+		},
+		{
+			"quest":  "Open 1 Artifact Chest",
+			"repeat": "15",
+			"exp":    "160"
+		}
+	],
+	"10": [
+		{
+			"quest":  "Use 1 Energy",
+			"repeat": "600",
+			"exp":    "1"
+		},
+		{
+			"quest":  "Open 1 chest in Outlands",
+			"repeat": "8",
+			"exp":    "120"
+		},
+		{
+			"quest":  "Use EXP potion: 1",
+			"repeat": "60",
+			"exp":    "20"
+		},
+		{
+			"quest":  "Fight 1 time in the Arena",
+			"repeat": "8",
+			"exp":    "200"
+		}
+	],
+	"11": [
+		{
+			"quest":  "Open 1 chest in the Tower",
+			"repeat": "25",
+			"exp":    "140"
+		},
+		{
+			"quest":  "Begin 1 Expedition",
+			"repeat": "7",
+			"exp":    "140"
+		},
+		{
+			"quest":  "Get 1 Soul Stone of any hero",
+			"repeat": "90",
+			"exp":    "30"
+		},
+		{
+			"quest":  "Battle any Hydra 1 time",
+			"repeat": "3",
+			"exp":    "240"
+		}
+	],
+	"12": [
+		{
+			"quest":  "Open 1 Artifact Chest",
+			"repeat": "15",
+			"exp":    "160"
+		},
+		{
+			"quest":  "Earn 1 Guild Activity points",
+			"repeat": "500",
+			"exp":    "2"
+		},
+		{
+			"quest":  "Collect 1 Titanite in the Guild Dungeon",
+			"repeat": "170",
+			"exp":    "5"
+		},
+		{
+			"quest":  "Strike down the highwayman",
+			"repeat": "5",
+			"exp":    "80"
+		}
+	],
+	"13": [
+		{
+			"quest":  "Fight 1 time in the Arena",
+			"repeat": "8",
+			"exp":    "200"
+		},
+		{
+			"quest":  "Use EXP potion: 1",
+			"repeat": "60",
+			"exp":    "20"
+		},
+		{
+			"quest":  "Begin 1 Expedition",
+			"repeat": "7",
+			"exp":    "140"
+		},
+		{
+			"quest":  "Complete 1 mission",
+			"repeat": "20",
+			"exp":    "100"
+		}
+	],
+	"14": [
+		{
+			"quest":  "Open 1 chest in Outlands",
+			"repeat": "8",
+			"exp":    "120"
+		},
+		{
+			"quest":  "Battle any Hydra 1 time",
+			"repeat": "3",
+			"exp":    "240"
+		},
+		{
+			"quest":  "Fight 1 time in the Grand Arena",
+			"repeat": "7",
+			"exp":    "140"
+		},
+		{
+			"quest":  "Get 1 Soul Stone of any hero",
+			"repeat": "90",
+			"exp":    "30"
+		}
+	],
+	"15": [
+		{
+			"quest":  "Strike down the highwayman",
+			"repeat": "5",
+			"exp":    "80"
+		},
+		{
+			"quest":  "Open 1 chest in the Tower",
+			"repeat": "25",
+			"exp":    "140"
+		},
+		{
+			"quest":  "Begin 1 Expedition",
+			"repeat": "7",
+			"exp":    "140"
+		},
+		{
+			"quest":  "Complete 1 heroic mission",
+			"repeat": "12",
+			"exp":    "165"
+		}
+	],
+	"16": [
+		{
+			"quest":  "Fight 1 time in the Arena",
+			"repeat": "8",
+			"exp":    "200"
+		},
+		{
+			"quest":  "Open 1 heroic chest",
+			"repeat": "3",
+			"exp":    "300"
+		},
+		{
+			"quest":  "Upgrade the Gift of the Elements to level 1",
+			"repeat": "10",
+			"exp":    "160"
+		},
+		{
+			"quest":  "Use 1 Energy",
+			"repeat": "600",
+			"exp":    "1"
+		}
+	],
+	"17": [
+		{
+			"quest":  "Collect 1 Titanite in the Guild Dungeon",
+			"repeat": "170",
+			"exp":    "5"
+		},
+		{
+			"quest":  "Complete 1 mission",
+			"repeat": "20",
+			"exp":    "100"
+		},
+		{
+			"quest":  "Open 1 Artifact Chest",
+			"repeat": "15",
+			"exp":    "160"
+		},
+		{
+			"quest":  "Battle any Hydra 1 time",
+			"repeat": "3",
+			"exp":    "240"
+		}
+	],
+	"18": [
+		{
+			"quest":  "Begin 1 Expedition",
+			"repeat": "7",
+			"exp":    "140"
+		},
+		{
+			"quest":  "Earn 1 Guild Activity points",
+			"repeat": "500",
+			"exp":    "2"
+		},
+		{
+			"quest":  "Open 1 chest in the Tower",
+			"repeat": "25",
+			"exp":    "140"
+		},
+		{
+			"quest":  "Strike down the highwayman",
+			"repeat": "5",
+			"exp":    "80"
+		}
+	],
+	"19": [
+		{
+			"quest":  "Use EXP potion: 1",
+			"repeat": "60",
+			"exp":    "20"
+		},
+		{
+			"quest":  "Open 1 chest in Outlands",
+			"repeat": "8",
+			"exp":    "120"
+		},
+		{
+			"quest":  "Fight 1 time in the Arena",
+			"repeat": "8",
+			"exp":    "200"
+		},
+		{
+			"quest":  "Collect 1 Titanite in the Guild Dungeon",
+			"repeat": "170",
+			"exp":    "5"
+		}
+	],
+	"20": [
+		{
+			"quest":  "Win 1 battle in Outland",
+			"repeat": "8",
+			"exp":    "200"
+		},
+		{
+			"quest":  "Complete 1 heroic mission",
+			"repeat": "12",
+			"exp":    "165"
+		},
+		{
+			"quest":  "Open 1 chest in the Tower",
+			"repeat": "25",
+			"exp":    "140"
+		},
+		{
+			"quest":  "Earn 1 Guild Activity points",
+			"repeat": "500",
+			"exp":    "2"
+		}
+	],
+	"21": [
+		{
+			"quest":  "Open 1 Artifact Chest",
+			"repeat": "6",
+			"exp":    "160"
+		},
+		{
+			"quest":  "Use EXP potion: 1",
+			"repeat": "60",
+			"exp":    "20"
+		},
+		{
+			"quest":  "Collect 1 Titanite in the Guild Dungeon",
+			"repeat": "170",
+			"exp":    "5"
+		},
+		{
+			"quest":  "Strike down the highwayman",
+			"repeat": "5",
+			"exp":    "80"
+		}
+	],
+	"22": [
+		{
+			"quest":  "Use 1 Energy",
+			"repeat": "600",
+			"exp":    "1"
+		},
+		{
+			"quest":  "Fight 1 time in the Arena",
+			"repeat": "8",
+			"exp":    "200"
+		},
+		{
+			"quest":  "Complete 1 mission",
+			"repeat": "20",
+			"exp":    "100"
+		},
+		{
+			"quest":  "Begin 1 Expedition",
+			"repeat": "7",
+			"exp":    "140"
+		}
+	],
+	"23": [
+		{
+			"quest":  "Complete 1 heroic mission",
+			"repeat": "12",
+			"exp":    "165"
+		},
+		{
+			"quest":  "Open 1 chest in the Tower",
+			"repeat": "25",
+			"exp":    "140"
+		},
+		{
+			"quest":  "Upgrade the Gift of the Elements to level 1",
+			"repeat": "10",
+			"exp":    "160"
+		},
+		{
+			"quest":  "Use EXP potion: 1",
+			"repeat": "60",
+			"exp":    "20"
+		}
+	],
+	"24": [
+		{
+			"quest":  "Battle any Hydra 1 time",
+			"repeat": "3",
+			"exp":    "240"
+		},
+		{
+			"quest":  "Open 1 heroic chest",
+			"repeat": "3",
+			"exp":    "300"
+		},
+		{
+			"quest":  "Win 1 battle in Outland",
+			"repeat": "8",
+			"exp":    "200"
+		},
+		{
+			"quest":  "Strike down the highwayman",
+			"repeat": "5",
+			"exp":    "80"
+		}
+	],
+	"25": [
+		{
+			"quest":  "Use 1 Energy",
+			"repeat": "600",
+			"exp":    "1"
+		},
+		{
+			"quest":  "Collect 1 Titanite in the Guild Dungeon",
+			"repeat": "170",
+			"exp":    "5"
+		},
+		{
+			"quest":  "Open 1 Artifact Chest",
+			"repeat": "15",
+			"exp":    "160"
+		},
+		{
+			"quest":  "Get 1 Soul Stone of any hero",
+			"repeat": "90",
+			"exp":    "30"
+		}
+	]
+}
