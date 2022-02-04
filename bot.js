@@ -84,8 +84,8 @@ client.on( 'message', message => {
 	}
 
 	// When Args are required
-	if ( command.args && ! args.length ) {
-		let reply = `You didn't provide any arguments, ${message.author}!`;
+	if ( ( command.args && ! args.length ) || ( Number.isInteger( command.args ) && args.length < command.args ) ) {
+		let reply = `You didn't provide the needed arguments, ${message.author}!`;
 
 		// If a usage is specified, offer that to the user
 		if ( command.usage ) {
